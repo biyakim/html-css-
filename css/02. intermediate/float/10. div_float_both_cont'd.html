@@ -1,0 +1,71 @@
+<meta charset="utf-8" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	outline: 1px solid red;
+}
+
+/* container1 */
+.container1 {
+	overflow: auto; /* 부모의 height 값이 0이 되는 현상 방지 위한 hack */
+	width: 900px;
+	margin: 0 auto;
+}
+.container1 .right-inner1, .container1 .right-inner2, .container1 .right-inner3 {
+	float: right;
+	width: 300px;
+}
+
+/* container2 */
+.container2 {
+	overflow: auto; /* 부모의 height 값이 0이 되는 현상 방지 위한 hack */
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.container2 .left-inner1, .container2 .left-inner2, .container2 .left-inner3 {
+	float: left;
+	width: 100px;
+}
+.container2 .right-inner1, .container2 .right-inner2, .container2 .right-inner3 {
+	float: right;
+	width: 100px;
+}
+</style>
+<body>
+	<!-- float이 right인 경우 순서 주의! (float 1이 가장 오른쪽에 있게 됨) -->
+	<div class="container1">
+		<div class="right-inner1">
+			오른쪽 float 1
+		</div>
+		<div class="right-inner2">
+			오른쪽 float 2
+		</div>
+		<div class="right-inner3">
+			오른쪽 float 3
+		</div>
+	</div>
+	
+	<!-- 왼쪽, 오른쪽 float된 영역이 섞여있는 경우 -->
+	<div class="container2">
+		<div class="left-inner1">
+			왼쪽 float 1
+		</div>
+		<div class="left-inner2">
+			왼쪽 float 2
+		</div>
+		<div class="left-inner3">
+			왼쪽 float 3
+		</div>
+		<div class="right-inner3">
+			오른쪽 float 1
+		</div>
+		<div class="right-inner2">
+			오른쪽 float 2
+		</div>
+		<div class="right-inner1">
+			오른쪽 float 3
+		</div>
+	</div>
+</body>

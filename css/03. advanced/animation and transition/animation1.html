@@ -1,0 +1,42 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.animated-box {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	/* 정의한 애니메이션 이름 */
+	animation-name: my-animation;
+	/* 애니메이션 재생 시간 */
+	animation-duration: 2s;
+	/* 재생 횟수 설정 (1이 기본 값, infinite로 지정시 무한 반복) */
+	animation-iteration-count: infinite;
+	/* 
+		애니메이션 재생 방향 정하기 (normal, reverse, alternate) 
+		alternate의 경우 normal -> reverse -> normal ... 순으로 재생
+	*/
+	animation-direction: normal;
+}
+/* 애니메이션 정의 */
+@keyframes my-animation {
+	/* 시작 조건 */
+	from {
+		/*
+			애니메이션을 진행하며 바꿀 속성 추가
+			https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
+		*/
+		background-color: red;
+		opacity: 0;
+	}
+	/* 종료 조건 */
+	to {
+		background-color: blue;
+		opacity: 1;
+	}
+}
+</style>
+<body>
+<div class="animated-box"></div>
+</body>

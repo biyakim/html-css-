@@ -1,0 +1,55 @@
+<!--
+
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements
+
+	인라인 요소의 특징
+
+	- 인라인 요소는 실제 내용(content)이 들어가는 만큼의 영역만을 차지함
+	- (내부에 텍스트만 포함하여) 단독으로 쓰이거나 인라인 요소를 포함 가능함 (블록 요소는 포함 불가)
+	- 줄바꿈이 생기지 않고 요소가 쭉 이어져서 배치됨
+
+-->
+<html>
+<head>
+	<meta charset="utf-8" />
+	<style>
+	* {
+		margin: 0; padding: 0;
+		outline: 1px solid red;
+	}
+	/* 
+		- 인라인 요소는 width, height속성을 적용할 수 없음
+		- 인라인 요소는 margin-top, margin-bottom을 적용할 수 없음 (left, right는 적용 가능)
+		- margin-left, margin-right 값이 없어도 약간의 외부 여백이 존재하게 됨 (제거 불가)
+	*/
+	strong, em, abbr, a, span {
+		width: 9999px;
+		height: 9999px;
+		margin-top: 9999px;
+		margin-bottom: 9999px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	/* 
+		단, 예외적으로 img 태그는 적용 가능 
+		https://stackoverflow.com/questions/21614938/html-element-which-defaults-to-displayinline-block
+		https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element
+
+	*/
+	img {
+		width: 200px;
+		height: 200px;
+		margin: 20px;
+	}
+	</style>
+</head>
+<body>
+	<strong>a</strong>
+	<em>b</em>
+	<abbr>c</abbr>
+	<a href="#">링크도 인라인</a>
+	<span>이미지도 </span>
+	<img src="smile.jpg" />
+	<span> 인라인 엘리먼트</span>
+</body>
+</html>

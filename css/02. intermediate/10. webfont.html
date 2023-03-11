@@ -1,0 +1,43 @@
+<!--
+	웹폰트의 적용 : 
+
+	http://webdir.tistory.com/56
+	http://naradesign.net/wp/2012/06/19/1830/
+-->
+<style>
+/* 사용할 폰트 등록 */
+@font-face {
+	font-family: 'NanumBarunGothic';
+	src: url('fonts/NanumBarunGothic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'NanumMyeongjo';
+	src: url('fonts/NanumMyeongjo.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'NanumPen';
+	src: url('fonts/NanumPen.ttf') format('truetype');
+}
+
+p { font-size: 30px; }
+
+/* 일반적으로 많이 사용하는 폰트 적용 */
+.arial { font-family: Arial, Helvetica, sans-serif; }
+.times-new-roman { font-family: "Times New Roman", Times, serif; }
+.comic-sans-ms { font-family: "Comic Sans MS", cursive, sans-serif; }
+
+/* font-face fonts */
+/* 앞서 적용한 폰트를 사용하여 font-family 스타일 적용 */
+.nanum-gothic { font-family: 'NanumBarunGothic'; }
+.nanum-myeongjo { font-family: 'NanumMyeongjo'; }
+.nanum-pen { font-family: 'NanumPen'; }
+
+</style>
+<!-- http://www.w3schools.com/cssref/css_websafe_fonts.asp -->
+<p class="arial">The quick brown fox jumps over the lazy dog</p>
+<p class="times-new-roman">The quick brown fox jumps over the lazy dog</p>
+<p class="comic-sans-ms">The quick brown fox jumps over the lazy dog</p>
+
+<p class="nanum-gothic">다람쥐 헌 쳇바퀴에 타고파.</p>
+<p class="nanum-myeongjo">다람쥐 헌 쳇바퀴에 타고파.</p>
+<p class="nanum-pen">다람쥐 헌 쳇바퀴에 타고파.</p>

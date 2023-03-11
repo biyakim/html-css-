@@ -1,0 +1,61 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.flexbox-container {
+	width: 1000px;
+	margin: 20px auto;
+	outline: 1px solid green;
+	display: flex;
+}
+/* 
+	flex-direction은 "display: flex"가 적용된 부모 요소에 적용하는 속성으로 주축(main-axis)의 방향을 정함
+	row : 왼쪽에서 오른쪽으로 배치
+	row-reverse : 오른쪽에서 왼쪽으로 배치 (row의 역방향)
+	column : 위에서 아래로 배치
+	column-reverse : 아래에서 위로 배치 (column의 역방향)
+
+	https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg
+*/
+.flex-direction-row { flex-direction: row; }
+.flex-direction-row-reverse { flex-direction: row-reverse; }
+.flex-direction-column { flex-direction: column; }
+.flex-direction-column-reverse { flex-direction: column-reverse; }
+.item {
+	width: 100px;
+	height: 100px;
+	background: lightgray;
+	outline: 1px solid red;
+}
+/* 순서 찾기 쉽도록 첫 번째 자식 요소 강조 */
+.item:first-child {
+	background: gray;
+}
+</style>
+<body>
+	<div class="flexbox-container flex-direction-row">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+	</div>
+	<div class="flexbox-container flex-direction-row-reverse">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+	</div>
+	<div class="flexbox-container flex-direction-column">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+	</div>
+	<div class="flexbox-container flex-direction-column-reverse">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+	</div>
+</body>

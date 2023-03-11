@@ -1,0 +1,61 @@
+<!-- CSS 선택자 -->
+<style>
+	/* 전체 선택자 (별표(*)를 사용) */
+	/* 가장 기초적인 형태의 reset 스타일 (기본적으로 주어지는 브라우저의 margin, padding값을 삭제) */
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* 태그 선택자 (태그 이름을 선택자로 사용) */
+	h1 {
+		color: red;
+	}
+	p {
+		color: blue;
+	}
+	button {
+		color: green;
+	}
+
+	/* 아이디(id) 선택자 (# + 아이디) */
+	#title {
+		background: yellow;
+	}
+
+	/* (매우 중요) 클래스(class) 선택자(. + 클래스) */
+	.name1 {
+		background: lightgray;
+	}
+
+	/* 자손 선택자 (스페이스로 계층 관계 설정) */
+	/* ul 태그 *내부*에 있는 li 태그 (계층 관계) */
+	ul li {
+		color: red;
+	}
+
+	/* 여러 선택자 동시 스타일링 (각 선택자를 쉼표로 구분) */
+	/* h1과 button 태그 및 name2라는 클래스 이름을 가진 요소 3개를 동시 선택 */
+	h1, button, .name2 {
+		font-size: 24px;
+	}
+
+	/* 여러 조건을 만족시켜야 하는 선택자 */
+	p.name1 {} /* p 태그이면서 name1 클래스를 가지고 있음 */
+	h1#title {} /* h1 태그이면서 title 아이디를 가지고 있음 */
+	.name1.name2 {} /* name1, name2 클래스를 가지고 있음 */
+</style>
+<body>
+	<!-- 아이디는 문서 내에서 유일하게 하나만 지정 가능 -->
+	<h1 id="title">CSS test</h1>
+	<!-- 클래스는 중복해서 지정 가능 -->
+	<p class="name1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend ac est eu varius. Praesent sed justo vel metus feugiat hendrerit.</p>
+	<!-- 여러개의 클래스 지정 가능 -->
+	<p class="name1 name2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend ac est eu varius. Praesent sed justo vel metus feugiat hendrerit.</p>
+	<button>button 1</button>
+	<button>button 2</button>
+	<ul>
+		<li>item 1</li>
+		<li>item 2</li>
+	</ul>
+</body>

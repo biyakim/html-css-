@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>네이버 레이아웃 따라해보기</title>
+
+<script src="util.js">
+</script>
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	outline: 1px solid red;	
+}
+body {
+	background: #EEE;
+}
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	background: white;
+}
+header.header {
+	overflow: auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+header.header img#corp-logo {
+	display: block;
+	float: left;
+	margin-left: 20px;
+	width: 150px;
+	height: 150px;
+}
+header.header input.search-input {
+	display: block;
+	float: left;
+	width: 800px;
+	height: 50px;
+	font-size: 30px;
+	border: 3px solid #19ce60;
+	margin-left: 20px;
+	margin-top: 50px;
+}
+header.header button.search-btn {
+	display: block;
+	float: left;
+	width: 100px;
+	height: 56px;
+	background: #19ce60;
+	margin-top: 50px;
+}
+section.panels {
+	overflow: auto;
+}
+main nav.menus {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+main nav.menus a:link,
+main nav.menus a:visited,
+main nav.menus a:hover,
+main nav.menus a:active
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #19ce60;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+}
+main .left-panel {
+	float: left;
+	width: 800px;
+}
+main .right-panel {
+	float:left;
+	width: 400px;
+}
+.news-stand {
+	overflow: auto;
+}
+.news-stand img.news-img {
+	float: left;
+}
+.today-recommend .recommend-item { padding: 20px; overflow: auto; }
+.today-recommend .recommend-item img { display: block; float: left; }
+/* 800-(150+40) => 610 */
+.today-recommend .recommend-item .content { float: left; width: 610px; }
+.login-panel #login-btn {
+	width: 360px;
+	height: 100px;
+	font-size: 24px;
+	color: white;
+	background: #19ce60;
+	margin: 20px;
+	font-weight: bold;
+}
+.trend-shopping {
+	overflow: auto;
+}
+.trend-shopping .shop-item {
+	float: left;
+}
+footer {
+	overflow: auto;
+	margin-bottom: 100px;
+}
+footer .left-panel {
+	float: left;
+	width: 800px;
+}
+footer .right-panel {
+	float: left;
+	width: 400px;
+}
+footer .extras {
+	clear: both;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+	<header class="header">
+		<img id="corp-logo" src="https://image.rocketpunch.com/company/5466/naver_logo.png?s=400x400&t=inside" />
+		<input class="search-input" type="text" />
+		<button class="search-btn">검색</button>
+	</header>
+	<main>
+		<nav class="menus">
+			<a href="#">메일</a>
+			<a href="#">카페</a>
+			<a href="#">블로그</a>
+			<a href="#">지식인</a>
+		</nav>
+		<section class="panels">
+			<div class="left-panel">
+				<h1>뉴스 스탠드</h1>
+				<div class="news-stand">
+					<img class="news-img" src="https://via.placeholder.com/200x100?text=news{index}" data-repeat="8" />
+				</div>
+				<h1>오늘 읽을만한 글</h1>
+				<div class="today-recommend">
+					<nav class="recommend-category">
+						책방, 부모i, 법률, ... 
+					</nav>
+					<div class="recommend-item" data-repeat="4">
+						<img src="https://via.placeholder.com/150x150?text=book{index}" />
+						<div class="content">
+							<h2>책방</h2>
+							<h3>소제목 {index}</h3>
+							<p data-lipsum="2"></p>	
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="right-panel">
+				<div class="login-panel">
+					<h1>로그인창</h1>
+					<button id="login-btn">NAVER 로그인</button>
+				</div>
+				<div class="trend-shopping">
+					<h1>트렌드쇼핑</h1>
+					<div class="shop-item" data-repeat="9">
+						<img src="https://via.placeholder.com/130x100?text=shop{index}" />
+						<br />
+						<b>제품 이름 {index}</b>
+						<br />
+						<span>제품 설명 {index}</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<h2 class="notice">공지사항</h2>
+		<div class="left-panel">
+			<div>
+				Creators : 크레이터 어쩌구
+			</div>
+			<div>
+				Partners : 파트너스 어쩌구
+			</div>
+		</div>
+		<div class="right-panel">
+			웨일브라우저 받기 등등 ...
+		</div>
+		<div class="extras">
+			회사소개, 인재채용, 제휴제안, ... 
+		</div>
+	</footer>
+</div>
+
+
+</body>
+</html>

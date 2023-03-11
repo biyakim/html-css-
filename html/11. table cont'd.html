@@ -1,0 +1,63 @@
+<style>
+	table {
+		border-collapse: collapse;
+		margin-left: 50px;
+		margin-top: 50px;
+	}
+	th, td {
+		border: 1px solid black;
+	}
+</style>
+<body>
+	<!--
+		테이블 중요 속성
+
+		colspan : 열 확장 정도
+		rowspan : 행 확장 정도
+
+		tip) 엑셀의 "셀 병합" 기능 생각해보기
+	-->
+	<table>
+
+		<tr>
+			<th colspan="2">표 제목 1</th>
+			<th>표 제목 2</th>
+		</tr>
+
+		<!-- colspan -->
+		<tr>
+			<td colspan="3">colspan 3</td>
+		</tr>
+		<tr>
+			<td colspan="2">colspan 2</td>
+			<td colspan="1">colspan 1</td>
+		</tr>
+		<tr>
+			<td>colspan</td>
+			<td>colspan</td>
+			<td>colspan</td>
+		</tr>
+
+		<!-- rowspan -->
+		<tr>
+			<td rowspan="2">rowspan 2</td>
+			<td>rowspan</td>
+			<td>rowspan</td>
+		</tr>
+		<tr>
+			<!-- 위에서 rowspan 2를 지정했으므로 td 요소를 하나 생략해야 함! -->
+			<td>rowspan</td>
+			<td>rowspan</td>
+		</tr>
+
+		<!-- colspan, rowspan 동시 사용 -->
+		<tr>
+			<td rowspan="2" colspan="2">rowspan 2 colspan 2</td>
+			<td>cell 1</td>
+		</tr>
+		<tr>
+			<td>cell 2</td>
+		</tr>
+
+	</table>
+</body>

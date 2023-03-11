@@ -1,0 +1,91 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!-- mobile 지원을 위해 필요한 메타 태그 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="jquery.js"></script>
+	<script>
+	</script>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style: none;
+	}
+	/* 데스크탑 환경의 CSS style*/
+	header { 
+		width: 100%;
+		height: 100px;
+	}
+	.logo {
+		display: block;
+		width: 100px;
+		height: 100px;
+		float: left;
+		background: green;
+	}
+
+	nav {
+		float: right;
+		width: 700px;
+		height: 100%;
+		background: yellow;
+	}
+	nav ul li {
+		background: linear-gradient(to right, #87e0fd 0%,#05abe0 100%);
+	}
+	nav ul li {
+		width: 20%;
+		float: left;
+		text-align: center;
+	}
+	nav ul li img.icon {
+		display: none;
+	}
+
+	/* 미디어 쿼리 */
+	@media only screen and (max-width : 799px) {
+		nav {
+			float: left;
+			width: 100%;
+		}
+	}
+	@media only screen and (max-width : 700px) {
+		nav ul li span {
+			display: none;
+		}
+		nav ul li img.icon {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	@media only screen and (max-width : 400px) {
+		nav ul li {
+			width: 50%;
+		}
+		.logo {
+			float: none;
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+		}
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<img class="logo" src="your-logo-here.png" />
+		<nav>
+			<ul>
+				<li><img class="icon" src="hamburger.gif" /><span>Home</span></li>
+				<li><img class="icon" class="icon" src="hamburger.gif" /><span>About</li>
+				<li><img class="icon" src="hamburger.gif" /><span>Sample Menu #1</span></li>
+				<li><img class="icon" src="hamburger.gif" /><span>Sample Menu #2</span></li>
+				<li><img class="icon" src="hamburger.gif" /><span>Contact</span></li>
+			</ul>
+		</nav>
+	</header>
+</body>
+</html>

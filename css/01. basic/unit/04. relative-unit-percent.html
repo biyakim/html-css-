@@ -1,0 +1,37 @@
+<!--
+
+percent 단위는 폰트에도 적용이 가능하지만 일반적으로 블록 요소의 사이즈를 지정할 때 더 많이 사용됨
+
+-->
+<meta charset="utf-8" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.outer {
+	width: 50%;
+	height: 100%;
+	font-size: 200%;
+	background: red;
+}
+.inner1 {
+	background: yellow;
+}
+.inner2 {
+	width: 25%;
+	height: 25%;
+	font-size: 50%;
+	background: green;
+}
+</style>
+<body>
+	<!-- outer의 font-size는 200% (16px * 2 = 32px) -->
+	<!-- outer의 width는 50% (브라우저 크기(body)의 반) -->
+	<div class="outer">
+		<div class="inner1">Hello 1</div>
+		<!-- inner의 font-size는 50% (16px * 2 * 0.5 = 16px) -->
+		<!-- inner의 width는 25% (outer의 1/4, 즉 브라우저 크기의 1/8) -->
+		<div class="inner2">Hello 2</div>
+	</div>
+</body>

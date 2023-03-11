@@ -1,0 +1,17 @@
+<!-- https://developer.mozilla.org/ko/docs/Web/HTML/Element/frameset -->
+<!-- frameset 사용시 body 태그를 사용하지 않음에 유의! -->
+<!-- 현재는 frameset, frame 태그 사용이 권장되지 않음 (not supported in HTML5) -->
+<html>
+<head>
+</head>
+<frameset cols="33.3%,33.3%,33.3%" border="5" bordercolor="blue" frameborder="yes">
+	<!-- 내부에 외부 html 문서를 삽입하는 형태로 작동 -->
+	<frame src="frames/framepart01.html" />
+	<frame src="frames/framepart02.html" />
+	<!-- frameset 내부에서 frameset 지정 가능 -->
+	<frameset rows="50%,50%">
+		<frame src="frames/framepart01.html" noresize />
+		<frame src="frames/framepart02.html" noresize />
+	</frameset>
+</frameset>
+</html>

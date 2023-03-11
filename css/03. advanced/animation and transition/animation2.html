@@ -1,0 +1,53 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.animated-box {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	background-color: black;
+	animation-name: my-animation;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	/* 애니메이션 시작 전 대기 시간 */
+	/* animation-delay: 3s; */
+	/*
+		none : 애니메이션 재생 전 상태로 되돌리기
+		forwards : 애니메이션 재생 이후 상태로 그대로 놔두기
+	*/
+	animation-fill-mode: none;
+}
+@keyframes my-animation {
+	/* 
+		더 디테일하게 애니메이션 진행 순서를 정의하기 위해서 %단위 값 사용 가능
+		
+		0% 		=> from 키워드와 같은 역할
+		100% 	=> to 키워드와 같은 역할
+	*/
+	0% {
+		background-color: red;
+		border-radius: 0%;
+	}
+	25% {
+		background-color: green;
+		border-radius: 25%;
+	}
+	50% {
+		background-color: blue;
+		border-radius: 50%;
+	}
+	75% {
+		background-color: orange;
+		border-radius: 25%;
+	}
+	100% {
+		background-color: red;
+		border-radius: 0%;
+	}
+}
+</style>
+<body>
+<div class="animated-box"></div>
+</body>

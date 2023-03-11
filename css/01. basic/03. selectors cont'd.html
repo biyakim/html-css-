@@ -1,0 +1,138 @@
+<!-- CSS 선택자 -->
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* 동위 선택자 (+, ~) */
+
+	/* + */
+	/* h1의 "형제중 순서상 바로 뒤에 등장"하는 p 태그 */
+	.mydiv h1 + p {
+		background: orange;
+	}
+	/* 바로 뒤에 등장하지 않기 때문에 적용되지 않음! */
+	.mydiv h1 + h2 {
+		background: orange;
+	}
+
+	/* ~ */
+	/* h1의 "형제중 순서상 뒤에 등장"하는 p 태그 */
+	.mydiv h1 ~ p {
+		color: blue;
+	}
+	/* 뒤에 등장하긴 하므로 스타일 적용됨! */
+	.mydiv h1 ~ h2 {
+		color: green;
+	}
+
+	/* 구조 선택자 */
+	/* 첫 번째 위치한 태그 */
+	.mylist li:first-child {
+		color: red;
+	}
+	/* 2n이므로 2번재, 4번째, ... 에 등장하는 태그가 영향을 받게 됨 */
+	.mylist li:nth-child(2n) {
+		background: lightgray;
+	}
+	/* 마지막에 위치한 태그 */
+	.mylist li:last-child {
+		color: blue;
+	}
+
+	/* 문자 선택자 */
+	/* 첫 글자에만 스타일 적용 */
+	p.class1::first-letter {
+		color: red;
+		font-size: 36px;
+	}
+	/* 첫 번째 줄에만 스타일 적용 (단, 첫 번째 줄은 뷰포트의 가로 크기에 좌우되어 결정됨) */
+	p.class2::first-line {
+		color: red;
+	}
+
+	p.class3 {
+		border: 1px solid red;
+	}
+
+	/* 
+		속성 선택자
+		선택자[속성이름="속성값"]
+
+	*/
+	img[alt="dog"] {
+		border: 10px solid blue;
+	}
+	img[title="cat"] {
+		border: 10px solid orange;
+	}
+	input[type="text"] {
+		font-size: 36px;
+	}
+
+	button {
+		width: 300px;
+		height: 100px;
+		font-size: 24px;
+	}
+	/* 
+		상태 선택자 
+		:checked
+		:focus
+		:enabled
+		:disabled
+	*/
+	input.mycheckbox:checked {
+		box-shadow: 0 0 0 3px orange;
+	}
+	input[type="text"]:focus {
+		color: red;
+		background: yellow;
+	}
+	/* enabled는 굳이 안써줘도 괜찮음 */ 
+	button:enabled {
+		background: green;
+	}
+	button:disabled {
+		background: red;
+	}
+
+	/* 반응 문자 선택자 */
+	/* 
+		드래그한 영역에 대한 스타일 적용 
+		(단, 적용할 수 있는 속성에는 제약이 있음 (https://developer.mozilla.org/en-US/docs/Web/CSS/::selection))
+	*/
+	p.class3::selection {
+		color: red;
+		background: yellow;
+	}
+</style>
+<body>
+	<div class="mydiv">
+		<h1>header 1</h1>
+		<p>paragraph 1</p>
+		<p>paragraph 2</p>
+		<h2>header 2</h2>
+	</div>
+
+	<ul class="mylist">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<p class="class1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend ac est eu varius. Praesent sed justo vel metus feugiat hendrerit.</p>
+	<p class="class2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend ac est eu varius. Praesent sed justo vel metus feugiat hendrerit. Nam mi elit, commodo nec vulputate vitae, suscipit vel dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend ac est eu varius. Praesent sed justo vel metus feugiat hendrerit. Nam mi elit, commodo nec vulputate vitae, suscipit vel dolor.</p>
+
+	<img src="http://placehold.it/100x100" alt="dog" />
+	<img src="http://placehold.it/100x100" title="cat" />
+
+	<input type="text" />
+	<input type="checkbox" class="mycheckbox"><br />
+
+	<button>enabled</button>
+	<button disabled>disabled</button>
+
+	<p class="class3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend ac est eu varius. Praesent sed justo vel metus feugiat hendrerit.</p>
+</body>

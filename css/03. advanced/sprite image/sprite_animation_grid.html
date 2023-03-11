@@ -1,0 +1,48 @@
+<style>
+.sticker {
+	background-position: 0 0;
+	width: 288px;
+	height: 288px;
+	/* 
+		- x축 keyframe 애니메이션과 y축 keyframe 애니메이션을 동시에 등록
+		- 현재 4 x 3 그리드의 스프라이트이므로 x축으로는 step을 4로 y축으로는 step을 3으로 함
+		- 보여주는 시간을 잘 계산 (기본적으로 한 프레임을 0.3초씩 보여주는 상황)
+			- x축으로는 한 프레임의 시간(0.3)을 입력
+			- y축으로는 (한 프레임의 시간 * (grid의 세로 개수)) 시간만큼 지난 이후 step을 이동
+	*/
+	animation: playX 0.3s steps(4) infinite, playY 0.9s steps(3) infinite;
+}
+
+@keyframes playX {
+	/* 
+		background-position-x로 등록 (to에는 이미지 전체 가로 사이즈 * -1)
+	*/
+	from { background-position-x: 0px; }
+	to { background-position-x: -1152px; }
+}
+
+@keyframes playY {
+	/* 
+		background-position-y로 등록 (to에는 이미지 전체 세로 사이즈 * -1)
+	*/
+	from { background-position-y: 0px; }
+	to { background-position-y: -864px; }
+}
+.sponge {
+	background-image: url("sponge.png");
+}
+.judy {
+	background-image: url("judy.png");
+}
+.kungfu {
+	background-image: url("kungfu.png");	
+}
+div {
+	display: inline-block;
+}
+</style>
+<body>
+	<div class="sponge sticker"></div>
+	<div class="judy sticker"></div>
+	<div class="kungfu sticker"></div>
+</body>

@@ -1,0 +1,69 @@
+<style>*{margin:0;padding:0}li,ol{list-style:none}header{margin-top:50px;height:100px}header h1{font-size:36px}#container{width:1024px;margin:0 auto}nav ul{line-height:100px}nav ul li{float:left;width:25%;height:100px;text-align:center;font-size:30px;color:#000;background:#fff}nav ul li:hover{background:#d3d3d3}section#contents{overflow:hidden}section#contents aside{float:left;width:20%}section#contents aside h1{font-size:24px}section#contents aside li{font-size:18px}section#contents aside li:hover{font-weight:700;text-decoration:underline}section#contents main#articles{float:left;width:80%}section#contents main#articles h1{font-size:32px}section#contents main#articles article{margin-bottom:50px}footer{height:200px}</style>
+
+<!-- 블로그 페이지 -->
+<body>
+	<section id="container">
+		<!-- 
+			header에는 해당 사이트의 제목, 로고, 메뉴, 회원 가입, 로그인 버튼등이 들어감
+			(주로 대부분의 사이트가 그렇다는 뜻이지 강제하는 것은 아님)
+		-->
+		<header>
+			<h1>내 블로그의 제목</h1>
+			<p>블로그입니다. 이것저것 잡다하게 쓰는 블로그입니다. 글 내용이 여러분에게 도움이 되었으면 좋겠네요!</p>
+		</header>
+		<section id="contents">
+			<!--
+				항해(navigation)의 의미에 걸맞게 주로 사이트를 구성할 각각의 페이지로 이동할 메뉴가 위치하는 태그 (메뉴를 ul, ol로 표현 가능)
+				(보통 메뉴가 헤더에 위치하므로, nav를 헤더에 넣어줘도 무방함)
+			-->
+			<nav>
+				<ul>
+					<li>소개</li>
+					<li class="selected">블로그</li>
+					<li>방명록</li>
+					<li>즐겨찾기</li>
+				</ul>
+			</nav>
+			<!--
+				양 사이드에 위치할 내용을 넣어주기 위해서 aside 태그를 사용
+			-->
+			<aside>
+				<h1>글 리스트</h1>
+				<ul>
+					<li>1번 글 제목</li>
+					<li>2번 글 제목</li>
+				</ul>
+			</aside>
+			<!--
+				가장 중요한 내용들이 포함되어있음을 알려주기 위해서 main 태그를 사용 가능 (단, main 태그는 문서내에 하나만 존재해야 함을 유의)
+			-->
+			<main id="articles">
+				<!-- 
+					하나의 완성된 글이 나옴을 알리기 위해서 article 태그를 사용하며 다음과 같은 내용을 포함 가능 (물론 다른 종류의 글도 포함 가능)
+
+					* 게시판 글
+					* 블로그 글
+					* 기사, 뉴스
+				-->
+				<article>
+					<h1>1번 글 제목</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non feugiat libero. Praesent accumsan dui enim, in dictum purus eleifend pharetra. Aliquam vel urna fermentum, tincidunt eros nec, elementum augue. Fusce sed pulvinar eros, molestie iaculis massa. Duis tempor nulla neque, quis imperdiet elit finibus a. Pellentesque ac rutrum mauris, at consectetur justo. In ut laoreet libero. Etiam viverra scelerisque felis id viverra. Nullam hendrerit mi sed vulputate faucibus. Proin rhoncus elit vitae elit pellentesque, vel vehicula leo ornare. Nulla euismod semper eros eu fermentum. Suspendisse quis tempor arcu. Phasellus tempus, est et finibus iaculis, ex lectus dictum ligula, nec lobortis neque leo nec dolor. Duis pretium velit arcu, vitae varius enim porta sed. Nullam a interdum lorem, eget rhoncus lectus.</p>
+					<p>Praesent tempus metus ac dui sollicitudin, quis venenatis mi auctor. In tempor augue ex, id iaculis est viverra ac. Ut vitae nibh eget nisi lobortis molestie non nec diam. Sed suscipit fringilla elementum. Nulla ullamcorper ligula tellus, a auctor mi lacinia elementum. Fusce eget dignissim libero. Curabitur et convallis velit. Nunc vitae tellus sed magna eleifend blandit. In malesuada, nunc vitae aliquam viverra, metus velit egestas enim, ac molestie velit ante at felis. Praesent dolor lorem, suscipit ac viverra non, luctus commodo magna. Vestibulum in diam porta, placerat odio vel, suscipit nisi. Nulla sed quam eget leo hendrerit rhoncus a eget elit. Praesent nisi odio, commodo vitae dui ut, vestibulum porta turpis. Nullam vestibulum volutpat nibh, eu vulputate ligula imperdiet quis.</p>
+				</article>
+				<article>
+					<h1>2번 글 제목</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non feugiat libero. Praesent accumsan dui enim, in dictum purus eleifend pharetra. Aliquam vel urna fermentum, tincidunt eros nec, elementum augue. Fusce sed pulvinar eros, molestie iaculis massa. Duis tempor nulla neque, quis imperdiet elit finibus a. Pellentesque ac rutrum mauris, at consectetur justo. In ut laoreet libero. Etiam viverra scelerisque felis id viverra. Nullam hendrerit mi sed vulputate faucibus. Proin rhoncus elit vitae elit pellentesque, vel vehicula leo ornare. Nulla euismod semper eros eu fermentum. Suspendisse quis tempor arcu. Phasellus tempus, est et finibus iaculis, ex lectus dictum ligula, nec lobortis neque leo nec dolor. Duis pretium velit arcu, vitae varius enim porta sed. Nullam a interdum lorem, eget rhoncus lectus.</p>
+					<p>Praesent tempus metus ac dui sollicitudin, quis venenatis mi auctor. In tempor augue ex, id iaculis est viverra ac. Ut vitae nibh eget nisi lobortis molestie non nec diam. Sed suscipit fringilla elementum. Nulla ullamcorper ligula tellus, a auctor mi lacinia elementum. Fusce eget dignissim libero. Curabitur et convallis velit. Nunc vitae tellus sed magna eleifend blandit. In malesuada, nunc vitae aliquam viverra, metus velit egestas enim, ac molestie velit ante at felis. Praesent dolor lorem, suscipit ac viverra non, luctus commodo magna. Vestibulum in diam porta, placerat odio vel, suscipit nisi. Nulla sed quam eget leo hendrerit rhoncus a eget elit. Praesent nisi odio, commodo vitae dui ut, vestibulum porta turpis. Nullam vestibulum volutpat nibh, eu vulputate ligula imperdiet quis.</p>
+				</article>
+			</main>
+		</section>
+		<!--
+			footer에는 주로 저작권, 주소, 연락처 등등의 정보가 들어감
+		-->
+		<footer>
+			<span>저작권은 나에게 있습니다.</span><br />
+			<span>기술 제휴를 원하면 <a href="mailto:hello@naver.com">hello@naver.com</a>이나 010-1234-5678로 연락주세요.</span>
+			<address>서울시 관악구 신림동 어쩌구아파트 1동 100호</address>
+		</footer>
+	</section>
+</body>

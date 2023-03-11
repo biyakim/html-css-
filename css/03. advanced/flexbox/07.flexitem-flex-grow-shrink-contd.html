@@ -1,0 +1,41 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.content * { 
+	outline: 1px solid black;
+}
+.content {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+/* 고정 크기 sidebar */
+.content aside.menu {
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 200px;
+}
+/* 비중 없는 sidebar */
+.content aside.extra {
+	width: 100px;
+	flex-grow: 1;
+}
+/* 가장 중요한 article */
+.content article {
+	width: 500px;
+	flex-grow: 3;
+}
+</style>
+<body>
+	<main class="content">
+		<aside class="menu">aside</aside>
+		<article>
+			<h1>Subject</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit fringilla porta. Quisque velit tellus, bibendum sed vehicula id, ornare id elit. Nam et purus elit.</p>
+		</article>
+		<aside class="extra">extra</aside>
+	</main>
+</body>

@@ -1,0 +1,54 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.flexbox-container-row {
+	/* width: 1200px; */
+	/* width: 600px; */
+	margin: 20px auto;
+	outline: 1px solid green;
+	display: flex;
+	flex-direction: row;
+}
+.flexbox-container-row .item {
+	width: 300px;
+	background: lightgray;
+	outline: 1px solid red;
+}
+
+/* 
+	flew-grow는 각 항목에 적용하는 속성으로 항목의 사이즈 이상으로 채울 수 있는 공간이 생기는 시점에 어느 정도 비례를 적용하여 사이즈를 늘려줘야 하는지를 정하기 위한 속성
+
+	※ 현재 각 항목의 가로 사이즈는 300px이고 3개의 항목이 있으므로, 부모 요소의 사이즈가 900px을 넘어가지 않으면 flex-grow 속성값이 적용되지 않음을 유의! 즉, 부모 요소의 가로 사이즈가 901px이 되는 시점부터 flex-grow 속성값의 비례가 적용되어 각 항목의 가로 사이즈에 추가됨!
+
+	※ 단, 본래 항목이 차지해야 할 가로 사이즈를 제하고 "나머지 가로 사이즈"가 분할되어 적용되는 것에 유의해야 함!
+	ex:
+	만약 부모 요소의 사이즈가 1200px일 경우 900px을 제하고 남은 300px 사이즈가 3:2:1의 비례로 분할되어 각각의 항목에 150px, 100px, 50px이 추가됨
+	(최종 사이즈는 각각 450px, 400px, 350px)
+*/
+.flexbox-container-row .item:nth-child(1) { flex-grow: 3; }
+.flexbox-container-row .item:nth-child(2) { flex-grow: 2; }
+.flexbox-container-row .item:nth-child(3) { flex-grow: 1; }
+
+/*
+	flex-shrink는 각 항목에 적용하는 속성으로 항목의 사이즈 이하로 채울 수 있는 공간이 줄어드는 시점에 어느 정도 비례를 적용하여 사이즈를 줄여줘야 하는지를 정하기 위한 속성
+
+	※ flex-grow와 다르게 flex-shrink는 사이즈가 줄어드는 시점에 적용됨. 이 경우, 부모 사이즈가 900px 미만으로 줄어들 때 적용됨
+
+	※ flex-grow와 비슷하게 원래 항목이 차지해야 할 사이즈의 "부족분이 분할되어 적용"되는 것에 유의
+	ex:
+	만약 부모 요소의 사이즈가 600px일 경우 본래 900px이 있어야 할 공간에서 300px 사이즈가 부족한 상태이므로 1:2:3의 비례로 부족한 사이즈를 분할하여 각각의 항목에 50px, 100px, 150px 만큼 차감함
+	(최종 사이즈는 각각 250px, 200px, 150px)
+*/
+.flexbox-container-row .item:nth-child(1) { flex-shrink: 1; }
+.flexbox-container-row .item:nth-child(2) { flex-shrink: 2; }
+.flexbox-container-row .item:nth-child(3) { flex-shrink: 3; }
+</style>
+<body>
+	<div class="flexbox-container-row">
+		<div class="item">grow 3</div>
+		<div class="item">grow 2</div>
+		<div class="item">grow 1</div>
+	</div>
+</body>

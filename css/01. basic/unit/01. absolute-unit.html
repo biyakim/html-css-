@@ -1,0 +1,35 @@
+<!--
+
+절대 단위
+
+px, cm, mm, in(inch)
+
+단위들 중 px이 제일 자주 사용됨
+cm, mm, in과 같은 단위는 주로 미디어 쿼리를 통해 프린터 출력물을 위한 스타일을 설정하기 위해서 사용함
+
+-->
+<meta charset="utf-8" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+h1:nth-child(1) {
+	font-size: 16px;
+}
+h1:nth-child(2) {
+	font-size: 1cm;
+}
+h1:nth-child(3) {
+	font-size: 10mm;
+}
+h1:nth-child(4) {
+	font-size: 0.3937in;
+}
+</style>
+<body>
+	<h1>Hello 1</h1>
+	<h1>Hello 2</h1>
+	<h1>Hello 3</h1>
+	<h1>Hello 4</h1>
+</body>

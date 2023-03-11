@@ -1,0 +1,95 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!-- mobile 지원을 위해 필요한 메타 태그 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="jquery.js"></script>
+	<script>
+	</script>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style: none;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	footer {
+		overflow: auto;
+		max-width: 900px;
+		width: 100%;
+		margin: 0 auto;
+		background: #333;
+		color: white;
+	}
+	.logo {
+		display: block;
+		width: 100px;
+		height: 100px;
+	}
+	div.company {
+		width: 20%;
+		float: left;
+	}
+	ul {
+		width: 20%;
+		float: left;
+	}
+	div.information {
+		width: 40%;
+		float: left;
+	}
+
+	/* 미디어 쿼리 */
+	@media only screen and (max-width : 799px) {
+		ul {
+			width: 40%;
+		}
+		div.information {
+			width: 100%;
+			float: left;
+		}
+	}
+	@media only screen and (max-width : 500px) {
+		div.company {
+			width: 100%;
+		}
+		ul {
+			width: 50%;
+		}
+
+	}
+	</style>
+</head>
+<body>
+	<footer>
+		<div class="company">
+			<img class="logo" src="your-logo-here.png" />
+			<span>02-1234-1234</span>
+		</div>
+		<ul>
+			<h1>Header # 1</h1>
+			<li>Menu # 1</li>
+			<li>Menu # 2</li>
+			<li>Menu # 3</li>
+			<li>Menu # 4</li>
+			<li>Menu # 5</li>
+		</ul>
+		<ul>
+			<h1>Header # 2</h1>
+			<li>Menu # 1</li>
+			<li>Menu # 2</li>
+			<li>Menu # 3</li>
+			<li>Menu # 4</li>
+			<li>Menu # 5</li>
+		</ul>
+		<div class="information">
+			<input type="text" placeholder="add text here" />
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nulla quam, maximus a lorem at, cursus imperdiet tellus. Vivamus finibus scelerisque tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+		</div>
+	</footer>
+</body>
+</html>

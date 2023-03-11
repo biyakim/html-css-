@@ -1,0 +1,59 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!-- mobile 지원을 위해 필요한 메타 태그 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="jquery.js"></script>
+	<script>
+	</script>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.full-width-img {
+		width: 100%;
+		height: auto;
+	}
+	.max-width-img {
+		max-width: 100%; /* 이렇게 max-width를 100%로 지정한 경우 원본 사이즈 이상으로는 늘어나지 않게 됨 (즉, 화질 열화가 발생하지 않게 됨) */
+		height: auto;
+	}
+	.half-width-img {
+		display: block;
+		margin: 0 auto;
+		/* width, max-width를 같이 사용하여 50%를 유지하되, 500px 이상으로 늘어나지 않도록 조정 (max-width의 우선순위가 width보다 높음) */
+		width: 50%;
+		max-width: 500px;
+		height: auto;
+	}
+	.img-container1, .img-container2 {
+		width: 50%;
+		outline: 1px solid red;
+	}
+	.img-container1 img {
+		width: 100%;
+		height: auto;
+	}
+	.img-container2 img {
+		display: block;
+		margin: 0 auto;
+		/* width, max-width를 같이 사용하여 100%를 유지하되(즉, 부모 영역을 온전히 다 차지함), 500px 이상으로 늘어나지 않도록 조정 (max-width의 우선순위가 width보다 높음) */
+		width: 100%;
+		max-width: 500px;
+		height: auto;
+	}
+	</style>
+</head>
+<body>
+	<img class="full-width-img" src="logo.jpg" />
+	<img class="max-width-img" src="logo.jpg" />
+	<img class="half-width-img" src="logo.jpg" />
+	<div class="img-container1">
+		<img src="logo.jpg" />
+	</div>
+	<div class="img-container2">
+		<img src="logo.jpg" />
+	</div>
+</body>
+</html>

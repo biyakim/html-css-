@@ -1,0 +1,58 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!-- mobile 지원을 위해 필요한 메타 태그 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="jquery.js"></script>
+	<script>
+	</script>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+		outline: 1px solid red;
+	}
+	p {
+		text-align: justify;
+	}
+	.page1 {
+		width: 800px;
+		margin: 0 auto;
+	}
+	.page1 img {
+		width: 300px;
+		float: left;
+	}
+	.page2 {
+		/* width, max-width를 같이 사용하여 80% 크기를 유지하되, 800px 이상으로 늘어나지 않도록 조정 (max-width가 더 높은 우선 순위를 가짐) */
+		width: 80%;
+		max-width: 800px;
+		margin: 0 auto;
+		margin-top: 100px;
+	}
+	.page2 img {
+		width: 37.5%; /* 300/800 = 0.375 */
+		float: left;
+	}
+	</style>
+</head>
+<body>
+	<section class="page1">
+		<img src="logo.jpg" />
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie placerat metus quis cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla eu mattis nulla. Nunc mattis odio non magna maximus, ut vulputate turpis ornare. Sed vel tellus eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vitae arcu eu ipsum aliquam interdum non quis purus. Integer faucibus, quam eget aliquam dictum, velit nunc sagittis purus, at ornare urna enim nec mauris. Praesent odio arcu, sollicitudin vitae eros ut, malesuada gravida nulla. Suspendisse vestibulum nisl urna, eget volutpat quam rutrum a. Sed eget sagittis lacus, eu egestas metus. Suspendisse ornare felis eget turpis faucibus, non malesuada lacus pharetra.</p>
+		<br />
+		<img src="logo.jpg" style="float: right;" />
+		<p>Maecenas quis dignissim tellus. Aenean id tellus ac magna venenatis sagittis. Mauris enim elit, interdum eget libero ut, varius posuere est. Maecenas dolor urna, pulvinar sit amet lacus non, tincidunt fermentum eros. Sed nec congue urna. Pellentesque sit amet dolor eu lectus egestas volutpat vel eu ligula. Nam faucibus, massa ut molestie vehicula, dolor diam posuere ante, eget auctor quam ante malesuada neque. Pellentesque ac posuere tellus. Pellentesque ut eleifend nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lacus ligula, facilisis ac ligula a, tempus tristique leo. Curabitur vitae maximus nunc. Vivamus varius felis et lectus vehicula mattis. Curabitur arcu quam, gravida id velit tincidunt, tempus semper nunc. Praesent ultricies pulvinar aliquam. Ut nec enim tellus.</p>
+	</section>
+	<section class="page2">
+		<img src="logo.jpg" />
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie placerat metus quis cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla eu mattis nulla. Nunc mattis odio non magna maximus, ut vulputate turpis ornare. Sed vel tellus eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vitae arcu eu ipsum aliquam interdum non quis purus. Integer faucibus, quam eget aliquam dictum, velit nunc sagittis purus, at ornare urna enim nec mauris. Praesent odio arcu, sollicitudin vitae eros ut, malesuada gravida nulla. Suspendisse vestibulum nisl urna, eget volutpat quam rutrum a. Sed eget sagittis lacus, eu egestas metus. Suspendisse ornare felis eget turpis faucibus, non malesuada lacus pharetra.</p>
+		<br />
+		<img src="logo.jpg" style="float: right;" />
+		<p>Maecenas quis dignissim tellus. Aenean id tellus ac magna venenatis sagittis. Mauris enim elit, interdum eget libero ut, varius posuere est. Maecenas dolor urna, pulvinar sit amet lacus non, tincidunt fermentum eros. Sed nec congue urna. Pellentesque sit amet dolor eu lectus egestas volutpat vel eu ligula. Nam faucibus, massa ut molestie vehicula, dolor diam posuere ante, eget auctor quam ante malesuada neque. Pellentesque ac posuere tellus. Pellentesque ut eleifend nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lacus ligula, facilisis ac ligula a, tempus tristique leo. Curabitur vitae maximus nunc. Vivamus varius felis et lectus vehicula mattis. Curabitur arcu quam, gravida id velit tincidunt, tempus semper nunc. Praesent ultricies pulvinar aliquam. Ut nec enim tellus.</p>
+	</section>
+	<!--
+		Q) 임의의 사이즈로 page1, page2 재구성 해보기 (이미지 파일도 바꿔보기)
+	-->
+</body>
+</html>

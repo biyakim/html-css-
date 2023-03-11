@@ -1,0 +1,109 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+</script>
+<style type="text/css">
+* { margin: 0; padding: 0; }
+/* 
+http://ko.learnlayout.com/position.html
+
+absolute는 가장 다루기 까다로운 위치 지정 값입니다. absolute는 뷰포트에 상대적으로 위치가 지정되는 게 아니라 "가장 가까운 곳에 위치한 조상 엘리먼트에 상대적으로 위치가 지정"된다는 점을 제외하면 fixed와 비슷하게 동작합니다.
+절대 위치가 지정된 엘리먼트가 기준으로 삼는 조상 엘리먼트가 없으면 문서 본문(document body)을 기준으로 삼고, 페이지 스크롤에 따라 움직입니다.
+"위치가 지정된" 엘리먼트는 position이 static으로 지정되지 않은 엘리먼트를 가리킨다는 사실을 기억하세요.
+*/
+
+/* 
+	absoulte 속성값 지정 
+	기준 : 가장 가까운 부모 요소 중 position 속성값이 지정된(= static이 아닌) 부모 요소를 기준으로 위치를 결정하되, 그러한 부모 요소가 없다면 body를 기준으로 위치함
+*/
+.box { 
+	position: absolute;
+	width: 200px;
+	height: 200px; 
+}
+/* 
+	1번째 박스 : 부모 태그가 없으므로 body를 기준으로 위치
+*/
+.absolute_box1 {
+	top: 50px;
+	left: 50px;
+	outline: 1px solid red;
+}
+
+/* 
+	2번째 박스 : 부모 태그가 있지만, 부모 태그의 position이 없으므로(= static 이므로), 역시 body를 기준으로 위치 
+*/
+.parent {
+	width: 400px;
+	height: 400px;
+	outline: 1px solid blue;
+}
+.absolute_box2 {
+	top: 100px;
+	left: 50px;
+	outline: 1px solid blue;
+}
+
+/* 
+	3번째 박스 : 부모(.parent_not_static)를 기준으로 위치
+	(부모 태그의 position이 relative이므로 기준점이 될 수 있음)
+*/
+.parent_not_static {
+	position: relative;
+	width: 400px;
+	height: 400px;
+	outline: 1px solid green;
+}
+.absolute_box3 {
+	top: 50px;
+	left: 50px;
+	outline: 1px solid green;
+}
+
+/*
+	4번째 박스 : 부모(.parent_not_static2)를 기준으로 위치
+	(부모 태그의 position이 absolute이므로 기준점이 될 수 있음)
+*/
+.parent_not_static2 {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	top: 200px;
+	left: 400px;
+	outline: 1px solid orange;
+}
+/*
+	만약, parent_static2의 position을 relative로 조정할 경우 4번째 박스는 해당 요소를 기준으로 위치를 정하게 됨 (가장 가까운 곳에 위치한 position이 지정된(= static이 아닌) 조상 엘리먼트에 상대적으로 위치가 지정되기 때문)
+*/
+.parent_static2 {
+	/* position: relative; */
+	width: 200px;
+	height: 200px;
+	outline: 1px solid red;
+}
+.absolute_box4 {
+	bottom: 50px;
+	right: 50px;
+	outline: 1px solid orange;
+}
+</style>
+</head>
+<body>
+	<div class="box absolute_box1">absolute box 1</div>
+
+	<div class="parent">
+		<div class="box absolute_box2">absolute box 2</div>
+	</div>
+
+	<div class="parent_not_static">
+		<div class="box absolute_box3">absolute box 3</div>
+	</div>
+
+	<div class="parent_not_static2">
+		<div class="parent_static2">
+			<div class="box absolute_box4">absolute box 4</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<style>
+	* {
+		margin: 0; padding: 0;
+	}
+	.button-reset {
+		background: none;
+		border: 0;
+	}
+	.button-default-style {
+		width: 300px;
+		height: 50px;
+		margin-left: 20px;
+		margin-top: 20px;
+		display: block;
+	}
+	.button1 {
+		/*
+			ghost button style 
+			http://designmodo.com/ghost-buttons/
+		*/
+		width: 300px;
+		height: 50px;
+		border: 2px solid black;
+		color: black;
+		font-size: 20px;
+		font-weight: bold;
+		border-radius: 20px;
+	}
+	/* 
+		A pseudo-class is used to define a special state of an element 
+		http://www.w3schools.com/css/css_pseudo_classes.asp
+	*/
+	.button1:hover {
+		background: black;
+		color: white;
+	}
+	.button2 {
+		width: 300px;
+		height: 50px;
+		/* http://www.colorzilla.com/gradient-editor/ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7db9e8), color-stop(49%,#207cca), color-stop(50%,#2989d8), color-stop(100%,#1e5799));
+		color: white;
+		font-size: 20px;
+		font-weight: bold;
+		border-radius: 6px;
+	}
+	.button2:hover {
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8));
+	}
+	/* 
+		http://www.w3schools.com/cssref/css3_pr_text-shadow.asp
+		text-shadow generator
+		http://www.css3generator.in/text-shadow.html
+		https://css-tricks.com/almanac/properties/t/text-shadow/
+	*/
+	.button3 {
+		color: white;
+		font-size: 24px;
+		font-weight: bold;
+		background: orange;
+	}
+	.button3:hover {
+		text-shadow: 0px 2px 10px #666;
+	}
+	.button4 {
+		color: white;
+		font-size: 32px;
+		background: black;
+	}
+	.button4:hover {
+		text-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(255, 45, 149) 0px 0px 20px, rgb(255, 45, 149) 0px 0px 30px, rgb(255, 45, 149) 0px 0px 40px, rgb(255, 45, 149) 0px 0px 50px, rgb(255, 45, 149) 0px 0px 75px;
+	}
+	.button5 {
+		width: 100px;
+		height: 100px;
+		color: white;
+		font-size: 28px;
+		border-radius: 100%;
+		background: #0068FF;
+	}
+	.button6 {
+		color: orange;
+		font-size: 24px;
+		border: 1px dotted orange;
+	}
+	.button6:hover {
+		border: 2px dotted orange;
+	}
+	/*
+		box-shadow 속성
+		http://www.w3schools.com/cssref/css3_pr_box-shadow.asp
+	*/
+	.button5:hover {
+		box-shadow: 0 0 20px 0 #333 inset;
+	}
+	.img-button {
+		background: url("button-img.png");
+	}
+	.img-button:hover {
+		background: url("button-img-blur.png");
+	}
+	.img-button-mockup {
+		position: relative;
+		background: #333;
+	}
+	.inner-border {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		width: 288px;
+		height: 38px;
+		border: 1px solid #ca4;
+	}
+	.inner-border span {
+		position: relative;
+		color: white;
+		font-size: 24px;
+		font-family: 'Times New Roman';
+		letter-spacing: 2px;
+		top: 5px;
+	}
+	.simple-svg-button {
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+	/*
+	.simple-svg-button .inner-rect {
+		fill: #eee;
+	}
+	*/
+	.simple-svg-button rect:hover {
+		fill: #C16D1A;
+	}
+	</style>
+</head>
+<body>
+	<button class="button-reset button-default-style button1">Style 1</button>
+	<button class="button-reset button-default-style button2">Style 2</button>
+	<button class="button-reset button-default-style button3">Style 3</button>
+	<button class="button-reset button-default-style button4">Style 4</button>
+	<button class="button-reset button-default-style button5">Style 5</button>
+	<button class="button-reset button-default-style button6">Style 6</button>
+	<button class="button-reset button-default-style img-button"></button>
+	<button class="button-reset button-default-style img-button-mockup">
+		<div class="inner-border">
+			<span>ORDER NOW</span>
+		</div>
+	</button>
+	<img class="button-reset button-default-style" src="svg-button.svg">
+	<svg class="simple-svg-button" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="300px" height="50px" viewBox="0 0 300 50" enable-background="new 0 0 300 50" xml:space="preserve" onclick="alert('rect');">
+		<rect class="inner-rect" fill="#F7931E" width="300" height="50" />
+	</svg>
+</body>
+</html>

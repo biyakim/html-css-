@@ -1,0 +1,84 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.flexbox-container {
+	width: 1000px;
+	margin: 20px auto;
+	outline: 1px solid green;
+	display: flex;
+	flex-direction: row;
+}
+/*
+	flex-wrap은 "display: flex"가 적용된 부모 요소에 적용하는 속성으로 flexbox 내부에 포함되어야 할 항목들이 항상 한 줄에 배치되어야 하는지 아니면 여러 줄로 배치되어도 되는지 여부를 결정하기 위해서 사용됨
+	(기본적으로 nowrap 속성값(한 줄에 배치)가 적용되며 wrap, wrap-reverse로 변경 가능)
+
+	https://css-tricks.com/wp-content/uploads/2018/10/flex-wrap.svg
+*/
+.flex-wrap-nowrap {
+	flex-wrap: nowrap;
+}
+.flex-wrap-wrap {
+	flex-wrap: wrap;
+}
+.flex-wrap-wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+.item {
+	width: 250px;
+	height: 100px;
+	background: lightgray;
+	outline: 1px solid red;
+}
+/* 순서 찾기 쉽도록 첫 번째 자식 요소 강조 */
+.item:first-child {
+	background: gray;
+}
+</style>
+<body>
+	<!--
+		주어진 4개의 요소는 가로 사이즈가 250px이라서 4개 모두 한 줄에 배치될 수 있으므로 문제가 생기지 않지만, 주석을 해제하여 4개의 요소가 추가되면 flew-wrap 속성의 속성값에 따라 결과가 달라짐
+	-->
+	<div class="flexbox-container flex-wrap-nowrap">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<!--
+			nowrap 속성값이 적용(무조건 한 줄에 맞춤)되었으므로 개별 항목의 가로 사이즈를 줄여서 한 줄에 맞추게 됨
+		-->
+		<!--
+		<div class="item">5</div>
+		<div class="item">6</div>
+		<div class="item">7</div>
+		<div class="item">8</div>
+		-->
+	</div>
+	<div class="flexbox-container flex-wrap-wrap">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<!--
+			wrap 속성값이 적용(여러 줄 사용 가능)되었으므로 개별 항목의 가로 사이즈를 그대로 두되 여러 줄을 사용하여 항목을 표시하게 됨
+		-->
+		<!--
+		<div class="item">5</div>
+		<div class="item">6</div>
+		<div class="item">7</div>
+		<div class="item">8</div>
+		-->
+	</div>
+	<!-- wrap-reverse 속성값을 적용할 경우에는 배치 순서가 반대로 됨 -->
+	<div class="flexbox-container flex-wrap-wrap-reverse">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+		<div class="item">7</div>
+		<div class="item">8</div>
+	</div>
+</body>

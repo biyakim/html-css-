@@ -1,0 +1,43 @@
+<!--
+
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements
+
+	블록 요소의 특징
+	
+	- 블록 요소는 기본적으로 부모의 가로 영역(width)을 모두 차지(100%)함 (물론 css를 사용하여 변경 가능)
+	- 블록 요소의 앞, 뒤에 줄바꿈(개행, newline)이 생김 (마치 br 태그를 앞 뒤에 넣은 것 처럼)
+	- 내부에 블록 요소와 인라인 요소를 포함하기 위한 일종의 용기(container) 역할을 함 (특히 div, section이 이러한 용도에 최적화된 태그)
+
+-->
+<html>
+<head>
+	<meta charset="utf-8" />
+	<style>
+	* {
+		margin: 0; padding: 0;
+		outline: 1px solid red;
+	}
+	</style>
+</head>
+<body>
+	<div>블록 엘리먼트</div>
+	<h1>블록 엘리먼트</h1>
+	<p>블록 엘리먼트</p>
+	<ul>
+		<li>블록 엘리먼트</li>
+	</ul>
+	<blockquote>블록 엘리먼트</blockquote>
+	<table>
+		<tr>
+			<th>블록</th>
+		</tr>
+		<tr>
+			<td>엘리먼트</td>
+		</tr>
+	</table>
+	<span>앞 span (인라인)</span>
+	<!-- 강제적으로 width를 줄여도 앞, 뒤에 개행이 생기는 것 확인 가능 (부모 영역을 다 차지(width: 100%)하기 때문에 개행이 생기는 것이 아님!) -->
+	<div style="width: 200px;">중간 div (블록)</div>
+	<span>뒷 span (인라인)</span>
+</body>
+</html>

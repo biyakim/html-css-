@@ -1,0 +1,48 @@
+<!--
+
+뷰포트(브라우저 화면 크기) 사이즈 기반 단위
+
+vw, vh
+
+-->
+<meta charset="utf-8" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+/* 
+	뷰포트의 가로(vw), 세로(vh) 크기에 기반하여 width, height을 계산
+	(뷰포트 : 브라우저에서 (상단 메뉴, 주소창 제외하고) 웹 페이지를 표시하기 위해서 사용되는 화면의 크기)
+*/
+div.outer {
+	/* 가로 크기는 50vw이므로 브라우저 너비의 반 */
+	width: 50vw;
+	/* 세로 크기는 50vh이므로 브라우저 높이의 반 */
+	height: 50vh;
+	background: red;
+}
+div.inner {
+	/* 가로 크기는 25vw이므로 브라우저 너비의 1/4 (퍼센트랑 혼동하지 말 것, 부모 사이즈에 영향 없음 유의) */
+	width: 25vw;
+	/* 세로 크기는 25vh이므로 브라우저 높이의 1/4 (퍼센트랑 혼동하지 말 것, 부모 사이즈에 영향 없음 유의) */
+	height: 25vh;
+	background: green;
+}
+p {
+	/* 뷰포트의 가로 크기(vw)에 기반하여 폰트 사이즈를 계산 */
+	/* 
+		만약 뷰포트의 가로 크기가 1000px이라면 
+		100vw이 1, 10vw이 0.1, 1vw이 0.01로 계산
+		1000 * 0.05 = 50px;
+	*/
+	font-size: 5vw;
+}
+</style>
+<body>
+	<div class="outer">
+		<div class="inner">
+		</div>
+	</div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit fringilla porta. Quisque velit tellus, bibendum sed vehicula id, ornare id elit. Nam et purus elit.</p>
+</body>

@@ -1,0 +1,68 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</script>
+	<style>
+	/* **공통적**으로 적용할 속성을 여기다가 쓰기 */
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	h1 {
+		color: white;
+	}
+	ul, ol {
+		list-style-position: inside;
+	}
+	
+	@media only screen and (max-width : 479px) {
+		/* max-width가 479px이므로 0px ~ 479px까지 적용되는 CSS 법칙을 여기에다가 적는다. */
+		body {
+			background: gray;
+		}
+		h1 {
+			font-size: 26px;
+		}
+		div {
+			display: none;
+		}
+	}
+
+	@media only screen and (min-width : 480px) {
+		/* min-width가 480px이므로 480px ~ 무한px 까지 적용되는 CSS 법칙을 여기에다가 적는다. */
+		body {
+			background: red;
+		}
+		h1 {
+			font-size: 20px;
+		}
+	}
+
+	/* media query가 들어가는 순서에 유의! 만약 이 규칙을 min-width 480px 규칙 위로 올리면 어떻게 되는가?? */
+	/*
+		768px ~ 무한px까지
+		480px ~ 무한px까지
+		
+		그런데, 일반적으로 밑의 rule이 위의 rule을 덮어버리기(overwrite) 때문에 768px 이상되는 사이즈로 브라우저의 가로 크기를 높여도 480px의 rule이 적용됨
+
+	*/
+	@media only screen and (min-width : 768px) {
+		/* min-width가 768px이므로 768px ~ 무한px 까지 적용되는 CSS 법칙을 여기에다가 적는다. */
+		body {
+			background: green;
+		}
+		h1 {
+			font-size: 16px;
+		}
+	}
+	</style>
+</head>
+<body>
+	<h1>Header 1</h1>
+	<hr />
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra augue eget dui mattis tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam condimentum feugiat arcu sed pharetra. Nullam at vehicula purus.
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<style>
+.hi {
+	/* div 사이즈 - 50 x 72*/
+	width: 50px;
+	height: 72px;
+	background-image: url("duke.png"); /* 전체 배경 사이즈 - 500 x 72 */
+	animation: play .8s steps(10) infinite; /* 10스텝 - 50px씩 이동 */
+}
+
+/* background-position 속성 - 배경 offset 위치 */
+@keyframes play {
+	from { background-position: 0px; }
+	to { background-position: -500px; } /* -500px인 경우 맨 처음 프레임으로 돌아옴 -550px의 경우 그 다음 프레임 보여줌 */
+}
+</style>
+
+<body>
+	<img src="duke.png" />
+	<div class="hi"></div>
+</body>

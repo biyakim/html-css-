@@ -1,0 +1,40 @@
+<script>
+window.onload = function() {
+	document.getElementById("slider").onchange = function() {
+		document.getElementById("slider-value").innerHTML = document.getElementById("slider").value;
+	};
+};
+</script>
+
+<body>
+	<!-- value에는 버튼의 레이블 입력 -->
+	<input type="button" value="Click Me" />
+	<br />
+	<!-- 
+		범위 선택 (최소 0, 최대 100, step이 10이고 min, max의 값이 0, 100이므로 10씩 증가 (만약 step이 20이면 5씩 증가)
+		value는 초기값
+	-->
+	<span id="slider-value">0</span>
+	<input id="slider" type="range" min="0" max="100" step="10" value="0" />
+	<br />
+	<!-- file 추가 -->
+	<input type="file" />
+	<br />
+	<!-- hidden은 input을 숨김, 전달할 값이 있지만 유저로부터의 입력을 금지시키면서 그 *존재 또한 알리고 싶지 않은 경우* 사용 -->
+	<input type="hidden" value="some hidden value" />
+	<br />
+	<!-- number는 숫자만 입력 허용 -->
+	<input name="age" type="number" value="0" min="0" max="120" step="1" />
+	<br />
+	<!-- 색상 정하기 -->
+	<input type="color" />
+	<br />
+	<input type="date" />
+	<br />
+
+	<!--
+		그 외에도 여러 input type이 존재함
+
+		https://www.w3schools.com/html/html_form_input_types.asp
+	-->
+</body>

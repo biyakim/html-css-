@@ -1,0 +1,33 @@
+<meta charset="UTF-8" />
+<style>
+	img {
+		display: block;
+		margin: 0 auto;
+		margin-top: 100px;
+	}
+</style>
+<body>
+
+	<img src="mapped.png" usemap="#mapper">
+	<!-- 이미지의 좌상단 좌표가 0, 0으로 되고 이를 기준으로 좌표를 설정 -->
+	<map name="mapper">
+		<!-- 사각형은 좌상단, 우하단 좌표를 설정하여 표현 -->
+		<!-- 20, 20이 좌상단 점의 좌표, 80, 80이 우하단 점의 좌표 -->
+		<area shape="rect" coords="20,20,80,80" onclick="alert('rect');">
+		<!-- 원은 원의 중점과 반지름을 설정하여 표현 -->
+		<!-- 150, 50이 원의 중점, 25가 원의 반지름 -->
+		<area shape="circle" coords="150,50,25" onclick="alert('circle');">
+		<!-- 다각형은 다각형을 이루는 정점들의 정보를 나열하여 표현 -->
+		<!-- 총 4개의 정점으로 표현 (따라서 8개의 숫자 필요) -->
+		<area shape="poly" coords="250,20,220,50,250,80,280,50" onclick="alert('polygon');">
+	</map>
+
+	<img src="mapped.png" usemap="#link_mapper">
+	<map name="link_mapper">
+		<!-- href 속성 이용하여 영역에 링크를 걸 수 있음 -->
+		<area shape="rect" coords="20,20,80,80" href="http://www.naver.com">
+		<area shape="circle" coords="150,50,25" href="http://www.daum.net">
+		<area shape="poly" coords="250,20,220,50,250,80,280,50" href="http://www.google.com">
+	</map>
+	
+</body>

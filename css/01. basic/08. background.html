@@ -1,0 +1,39 @@
+<!-- CSS 배경 관련 스타일 -->
+<style>
+body {
+	height: 10000px;
+}
+/*
+body {
+	background-color: red;
+}
+*/
+body {
+	background-image: url('image/seamless.jpg');
+	background-repeat: repeat; /* x, y축으로 모두 반복 (기본값) */
+	/* background-repeat: no-repeat; */ /* 반복 없음 */
+	/* background-repeat: repeat-x; */ /* x축으로만 반복 */
+	/* background-repeat: repeat-y; */ /* y축으로만 반복 */
+}
+body {
+	background-image: url('image/seamless.jpg');
+	background-repeat: no-repeat;
+	background-position: top left; /* 사용 가능 키워드 top, bottom, left, right, center */
+	/* background-position: 50% 50%; */ /* 상대값용 단위도 사용 가능 (50% 50% 사용시 화면 정중앙 정렬) */
+	/* background-position: 100px 100px; */ /* 절대 좌표도 사용 가능 */
+	background-attachment: scroll; /* 배경도 같이 scroll (기본값) */
+	/* background-attachment: fixed; */ /* 화면이 scroll되어도 배경은 고정 */
+}
+body {
+	/* 여러 이미지를 동시에 적용하는 것도 가능 (단, 순서를 주의! 먼저 url을 쓰는 이미지가 앞에 나옴 (포토샵 레이어처럼 작동)) */
+	background-image: url('image/seamless2.jpg'), url('image/seamless.jpg');
+	background-repeat: no-repeat;
+	/* 배경 사이즈 직접 지정 가능 */
+	background-size: 100px 200px, 300px 300px;
+	/* background-attachment: fixed; */ /* size를 퍼센트로 주면 아마 fixed로 하는것이 자연스러울 것~ */
+	/* background-size: 50% 50%, 100% 100%; */
+}
+</style>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam magna purus, mattis vel iaculis ut, euismod et elit. Integer tristique, est quis molestie ultrices, magna lacus accumsan massa, non tincidunt lacus ligula in sem. Pellentesque a iaculis dui. Sed in scelerisque elit. Vivamus sit amet eros rutrum ante porttitor varius vitae et eros. Maecenas tortor dui, aliquet nec iaculis sit amet, maximus quis velit. Sed sit amet lacinia felis. Proin a placerat eros, id interdum mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi blandit viverra arcu nec hendrerit. Sed mollis odio dignissim nisi cursus, vel faucibus quam volutpat. Quisque in justo velit. Curabitur fermentum neque at lacus rhoncus ultrices. Aenean vel ipsum ullamcorper, hendrerit arcu eget, ultricies arcu. Praesent lobortis mattis tincidunt.<br />Sed blandit sit amet neque et sodales. Nulla gravida aliquam vehicula. Suspendisse potenti. Nam id eros sed massa interdum luctus sed at quam. Integer mollis nibh sed ipsum tempor, in gravida nisi accumsan. Aliquam molestie maximus odio sed placerat. Donec sollicitudin, justo non tempor dignissim, erat enim lacinia orci, vel porta nisi sem ac eros. Aliquam dictum velit lacinia, posuere diam vitae, vulputate ex. Aenean faucibus posuere est sit amet consectetur. Mauris interdum vitae risus a rhoncus. Vestibulum congue vestibulum est. Curabitur tempor lacinia lectus, a condimentum libero volutpat sed. Aliquam iaculis lorem urna, elementum eleifend ipsum cursus sit amet.</p>
+</body>

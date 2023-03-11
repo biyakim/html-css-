@@ -1,0 +1,55 @@
+<!--
+
+상대 단위 (기준이 존재함!)
+
+em, rem 단위 설명
+
+http://naradesign.net/wp/2014/09/16/2067/
+
+em => px, percent 단위 변환 계산기
+https://www.w3schools.com/tags/ref_pxtoemconversion.asp
+
+-->
+<meta charset="utf-8" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+/*
+	em : 대문자 M의 높이를 기준으로 하는 단위
+	1em = 16px 의 크기가 일반적으로 적용됨
+	em 단위의 경우 부모의 em 크기가 자식의 em 크기에 영향을 줌
+	만약 em을 지정하지 않을 경우 부모의 em 크기를 상속받음
+
+	When no value for an inherited property has been specified on an element, the element gets the computed value of that property on its parent element. Only the root element of the document gets the initial value given in the property's summary.
+*/
+/* 
+html 스타일에 아래와 같은 CSS rule이 생략되어 있다고 생각하기
+
+html {
+	font-size: 1em;
+}
+*/
+.container {
+	font-size: 3em;
+}
+.child-container {
+	font-size: 0.5em;
+}
+</style>
+<body>
+	<!-- container 내부의 font-size는 3em (16px * 3) -->
+	<div class="container">
+		<span>hello</span>
+		<span style="font-size: 48px;">hello</span>
+		<!-- 
+			child-container 내부의 font-size는 0.5em
+			(em는 부모 font-size에 영향을 받으므로 (16px * 3) * 0.5 = 24px) 
+		-->
+		<div class="child-container">
+			<span>hello</span>
+			<span style="font-size: 24px;">hello</span>
+		</div>
+	</div>
+</body>

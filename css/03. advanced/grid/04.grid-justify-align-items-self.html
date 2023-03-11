@@ -1,0 +1,49 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.grid-container {
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	outline: 1px solid green;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	/* justify-items : 수평 방향 정렬 (horizontal) */
+	justify-items: stretch;
+	justify-items: center;
+	justify-items: start;
+	justify-items: end;
+	/* align-items : 수직 방향 정렬 (vertical) */
+	align-items: stretch;
+	align-items: center;
+	align-items: start;
+	align-items: end;
+}
+.item {
+	color: white;
+	font-size: 26px;
+	outline: 1px solid red;
+}
+.one { background: red; }
+.two { background: green; }
+.three { background: blue; }
+.four { 
+	background: orange;
+	/*
+		flexbox와 비슷하게 justify-self, align-self 속성을 이용하여 개별적인 항목의 정렬 방식 변경 가능
+	*/
+	justify-self: center;
+	align-self: center;
+}
+</style>
+<body>
+	<div class="grid-container">
+		<div class="item one">item 1</div>
+		<div class="item two">item 2</div>
+		<div class="item three">item 3</div>
+		<div class="item four">item 4</div>
+	</div>
+</body>

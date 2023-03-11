@@ -1,0 +1,68 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+header {
+	height: 300px;
+	background: yellow;
+}
+footer {
+	height: 150px;
+	background: gray;
+}
+ul {
+	list-style-position: inside;
+}
+.forprint {
+	display: none;
+}
+/* 인쇄를 할 때 적용할 CSS 규칙 작성 */
+@media print {
+	header, footer, section.ad {
+		display: none;
+	}
+	/* print-friendly한 단위로 변경 */
+	article h1 {
+		font-size: 0.8cm;
+	}
+	article p {
+		font-size: 0.4cm;
+	}
+	/* 인쇄할 때 필요 없는 요소에 notforprint 클래스 부여 */
+	.notforprint {
+		display: none;
+	}
+	/* 반대로 인쇄할 때에만 필요한 요소에 forprint 클래스 부여 */
+	.forprint {
+		display: block;
+	}
+}
+</style>
+<body>
+	<header>
+		Hello, I'm Header
+		<nav>
+			<ul>
+				<li>menu #1</li>
+				<li>menu #2</li>
+				<li>menu #3</li>
+			</ul>
+		</nav>
+	</header>
+	<article>
+		<h1>Article Title...</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt varius dolor, placerat elementum mi facilisis a. Curabitur et feugiat lectus. Aenean id sem urna. Pellentesque id diam placerat, tempor mauris non, consectetur risus. Vivamus tincidunt enim quis ligula ultricies, sit amet tempus nulla fermentum. Nunc consectetur nec velit vel hendrerit. Donec sit amet turpis euismod augue lobortis ornare commodo quis ligula. Vivamus cursus interdum dolor, ornare tempus eros dictum vitae. Maecenas sed scelerisque purus.<br />
+			Nulla nec convallis augue, ac aliquam ipsum. Praesent ante dolor, posuere id massa quis, consequat laoreet lectus. Nullam pretium urna ante, sit amet posuere mauris rutrum dictum. Suspendisse dignissim ipsum ut sem accumsan sodales. Pellentesque efficitur euismod nisi sit amet elementum. Quisque aliquet, nisi ut semper interdum, ligula libero tincidunt quam, id consequat urna elit eu lacus. Nam id sagittis tortor. Phasellus id dictum est, vitae pretium magna. In posuere quam at ex fringilla, ac pulvinar velit cursus. Duis risus leo, ornare nec tellus non, lacinia tempus dui. Sed quis augue tellus. Donec sit amet tristique ipsum. Phasellus luctus dictum ipsum, non accumsan velit fermentum et. Ut ac ligula a neque mollis facilisis. Etiam ut leo ut mi iaculis sodales id nec massa.
+		</p>
+		<span class="forprint">이 페이지의 원래 주소는 http://www.naver.com/asdf1111입니다.</span>
+	</article>
+	<section class="ad">
+		<img src="banner.gif" />
+	</section>
+	<footer>
+		Hello, I'm Footer
+	</footer>
+</body>

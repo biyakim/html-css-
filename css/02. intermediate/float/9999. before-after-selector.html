@@ -1,0 +1,20 @@
+<style>
+/* 해당 요소 앞에 임의의 요소를 추가함 */
+.hello:before {
+	content: "Before"; /* 요소의 내용 */
+	display: block;
+	/* 그 외 필요한 속성 추가 가능 */
+	color: orange;
+	text-decoration: underline;
+}
+/* 해당 요소 뒤에 임의의 요소를 추가함 */
+.hello:after {
+	content: "After";
+	display: inline;
+	color: red;
+	font-size: 2em;
+}
+</style>
+<body>
+	<span class="hello">Hello</span>
+</body>

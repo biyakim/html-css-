@@ -1,0 +1,72 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.flexbox-container-row {
+	width: 1000px;
+	height: 500px;
+	margin: 20px auto;
+	outline: 1px solid green;
+	display: flex;
+	flex-direction: row;
+	/*
+		align-items는 flexbox 내부에 포함되어야 할 항목들의 반대 축(cross-axis) 방향의 정렬 방식을 지정하기 위해서 사용됨
+		
+		https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg
+
+		현재 주 축(main-axis)의 방향이 row로 설정되어 있으므로 아래 사진의 cross start, cross end 부분이 정렬의 기준이 됨
+		https://miro.medium.com/max/2800/1*dH2D2U0yOf4a2Z_OYxRsKg.png 
+	*/
+	align-items: flex-start;
+	align-items: flex-end;
+	align-items: center;
+	/*
+		stretch로 지정할 경우 부모 flexbox의 height과 같게 height을 조정하여 꽉 채워 줌
+		(단, 항목에 직접 height을 지정한 경우는 제외)
+	*/
+	align-items: stretch;
+	/*
+		justify-content는 주 축(main-axis), align-items는 반대 축(cross-axis) 정렬을 담당하므로 서로 독립적으로 정렬 방식 지정 가능
+	*/
+	justify-content: center;
+}
+.flexbox-container-row .item {
+	width: 200px;
+	background: lightgray;
+	outline: 1px solid red;
+}
+
+.flexbox-container-column {
+	width: 1000px;
+	margin: 20px auto;
+	outline: 1px solid green;
+	display: flex;
+	flex-direction: column;
+	height: 500px;
+	align-items: flex-start;
+	align-items: flex-end;
+	align-items: center;
+	justify-content: center;
+}
+.flexbox-container-column .item {
+	height: 100px;
+	background: lightgray;
+	outline: 1px solid red;
+}
+.flexbox-container-column .item:nth-child(1) { width: 100px; }
+.flexbox-container-column .item:nth-child(2) { width: 200px; }
+.flexbox-container-column .item:nth-child(3) { width: 300px; }
+</style>
+<body>
+	<div class="flexbox-container-row">
+		<div class="item">1 orem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+	</div>
+	<div class="flexbox-container-column">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+	</div>
+</body>

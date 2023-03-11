@@ -1,0 +1,33 @@
+<body>
+	<!--
+		양식(form, 폼) 태그 
+
+		- fieldset 태그
+		- legend 태그
+	-->
+	<form class="container">
+		<!--
+			서로 관련이 깊은 입력 양식(회원 가입이라면 기본 정보와 추가 정보)을 그룹으로 묶기 위해서 fieldset 태그 사용
+		-->
+		<fieldset>
+			<!--
+				관련있는 입력 양식에 대한 짤막한 설명을 제공하기 위해서 legend 태그 사용
+				(fieldset 내부에서만 사용하며 반드시 가장 첫 번째로 위치한 자식 태그로 사용되어야 함)
+				(legend는 범례라는 뜻도 가지고 있음)
+			-->
+			<legend>기본 정보</legend>
+			<label>이름</label><input type="text" /><br />
+			<label>성별</label>
+			<input id="radio_gender_male" type="radio" name="gender" value="Male" checked>
+			<label for="radio_gender_male">남성</label>
+			<input id="radio_gender_female" type="radio" name="gender" value="Female">
+			<label for="radio_gender_female">여성</label>
+		</fieldset>
+		<fieldset>
+			<legend>추가 정보</legend>
+			<label>E-mail</label><input type="text" /><br />
+			<label>주소</label><input type="text" />
+		</fieldset>
+		<input type="submit" />
+	</form>
+</body>

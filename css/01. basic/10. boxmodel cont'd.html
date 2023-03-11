@@ -1,0 +1,44 @@
+<!-- box-sizing 속성의 의미 -->
+<html>
+<head>
+	<meta charset="utf-8" />
+	<style>
+	* {
+		margin: 0; padding: 0;
+		outline: 1px solid red;
+	}
+	.container1 {
+		/* 
+			box-sizing을 content-box로 설정할 경우 (기본값)
+			content 영역의 사이즈를 width, height으로 설정함
+			따라서 padding과 border가 조금이라도 있다면 실제 계산된 최종 width, height값은 더 커지게 됨
+		*/
+		box-sizing: content-box;
+		width: 300px;
+		height: 300px;
+		margin: 50px;
+		padding: 50px;
+		border: 10px solid black;
+	}
+	.container2 {
+		/* 
+			box-sizing을 border-box로 설정할 경우
+			padding, border까지의 영역을 포함(margin은 외부에 생기는 여백이므로 포함되지 않음)하여 width, height값을 설정함
+			(따라서 content의 사이즈가 border, padding의 사이즈에 따라 줄어들게 됨)
+			(계산이 더 직관적이기 때문에 가급적 border-box 사용을 권장)
+		*/
+		box-sizing: border-box;
+		width: 300px;
+		height: 300px;
+		margin: 50px;
+		padding: 50px;
+		border: 10px solid black;
+	}
+	/* Q) 개발자 도구에서 padding, border값을 실시간으로 조정해보면서 차이를 알아보기 */
+	</style>
+</head>
+<body>
+	<div class="container1">Hello</div>
+	<div class="container2">Hello</div>
+</body>
+</html>

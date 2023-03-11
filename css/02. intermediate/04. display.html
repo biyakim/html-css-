@@ -1,0 +1,48 @@
+<!--
+
+	display 속성을 이용하여 요소의 특성을 바꿀 수 있음
+	(인라인 요소가 블록 요소의 특징을 가지게 변경하거나 블록 요소가 인라인 요소의 특징을 가지게 할 수 있음!)
+
+-->
+<html>
+<head>
+	<meta charset="utf-8" />
+	<style>
+	* {
+		margin: 0; padding: 0;
+		outline: 1px solid red;
+	}
+	.inline-div {
+		display: inline;
+	}
+	.block-span {
+		display: block;
+	}
+	/* none 값을 적용할 경우, DOM에 존재는 하지만 마치 존재하지 않는 것처럼 취급 (즉, 요소가 보여지지 않고 해당 요소가 전체 레이아웃에 영향을 끼치지 않음) */
+	.none-div, .none-span {
+		display: none;
+	}
+	/* visibility 속성에 hidden 값을 적용한 경우에는 요소가 보이지는 않지만 display: none을 적용한 것과 다르게, 전체 레이아웃에는 영향을 끼침 */
+	.hidden-div, .hidden-span {
+		/* 기본값은 visible */
+		visibility: hidden;
+	}
+	</style>
+</head>
+<body>
+	<div class="inline-div">div가 인라인 엘리먼트처럼 보인다면??</div>
+	<span>어떻게 될까?</span>
+	<span>스팬이</span>
+	<span class="block-span">블록 엘리먼트처럼</span>
+	<span>보인다면?</span>
+
+	<!-- none-div, none-span은 display 속성을 사용하여 안보이게 하였으므로 공간을 차지하지 않음! -->
+	<div class="none-div">보이지 않는 div</div>
+	<span class="none-span">보이지 않는 span</span>
+
+	<!-- hidden-div, hidden-span은 visibility 속성을 사용하여 안보이게 하였으므로 공간은 차지함! -->
+	<div class="hidden-div">보이지 않는 div</div>
+	<span class="hidden-span">보이지 않는 span</span>
+	<div>위에 빈 공간이 있는 이유는?</div>
+</body>
+</html>

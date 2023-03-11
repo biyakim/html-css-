@@ -1,0 +1,64 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	outline: 1px solid red;
+}
+.grid-container {
+	width: 1200px;
+	margin: 0 auto;
+	outline: 1px solid green;
+	display: grid;
+	/* 
+		grid-template 속성을 통해서
+
+		grid-template-areas,
+		grid-template-columns,
+		grid-template-rows
+
+		3가지 속성을 동시 지정 가능
+	*/
+	grid-template:
+		"header header header" 100px /* 헤더 세로 크기 100px*/
+		"aside article banner" minmax(1000px, auto) /* 중간 컨텐츠는 최소 1000px 유지 */
+		"footer footer footer" 100px /* 푸터 세로 크기 100px */
+		/ 100px 1fr 100px
+		/*
+			왼쪽 aside, 오른쪽 banner 크기는 모두 100px
+			중간 1fr은 (200px이 빠진) 나머지 영역을 모두 차지하도록 하기 위해서 설정
+		*/
+	;
+}
+header {
+	grid-area: header;
+}
+aside.nav {
+	grid-area: aside;
+}
+article {
+	grid-area: article;
+}
+aside.banner {
+	grid-area: banner;
+}
+footer {
+	grid-area: footer;
+}
+</style>
+<body>
+	<div class="grid-container">
+		<header>header</header>
+		<aside class="nav">
+			aside
+			<nav>nav</nav>
+		</aside>
+		<article>
+			<h1>Subject</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit fringilla porta. Quisque velit tellus, bibendum sed vehicula id, ornare id elit. Nam et purus elit. </p>
+		</article>
+		<aside class="banner">
+			banner
+		</aside>
+		<footer>footer</footer>
+	</div>
+</body>

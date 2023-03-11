@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<style>
+	* {
+		margin: 0; 
+		padding: 0;
+	}
+	a {
+		position: relative;
+		top: 50px;
+		left: 50px;
+		font-size: 48px;
+		text-decoration: none; /* 보통 링크 밑줄이 보기 싫다고 text-decoration을 none으로 지정함 */
+	}
+	/* 방문하지 않은 링크 */
+	a:link {
+		color: blue;
+	}
+	/* 이미 방문한 링크 */
+	a:visited {
+		color: red;
+	}
+	/* 마우스 오버된 링크 */
+	/* 순서) link와 visited 뒤에 와야 함 */
+	a:hover {
+		color: green;
+	}
+	/* 클릭된 상태의 링크 */
+	/* 순서) hover 뒤에 와야 함 */
+	a:active {
+		color: pink;
+	}
+	/* LOVE AND HATE로 외우기? */
+	</style>
+</head>
+<body>
+	<a href="http://www.example.com">example</a>
+</body>
+</html>

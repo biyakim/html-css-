@@ -1,0 +1,31 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.grid-container {
+	margin: 0 auto;
+	outline: 1px solid green;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-row-gap: 20px;
+	grid-column-gap: 40px;
+	/* 
+		grid-gap 속성을 이용하면 행, 열의 여백을 손쉽게 지정 가능
+	*/
+	/* grid-gap: 20px 40px; */
+}
+.item {
+	font-size: 26px;
+	outline: 1px solid red;
+}
+</style>
+<body>
+	<div class="grid-container">
+		<div class="item">item 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit fringilla porta. Quisque velit tellus, bibendum sed vehicula id, ornare id elit. Nam et purus elit.</div>
+		<div class="item">item 2</div>
+		<div class="item">item 3</div>
+		<div class="item">item 4</div>
+	</div>
+</body>

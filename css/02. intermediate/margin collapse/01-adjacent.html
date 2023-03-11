@@ -1,0 +1,49 @@
+<!--
+	(서로 인접한 요소의) 마진 겹칩 (margin collapse)
+	서로 인접한 두 블록 요소 사이에 위, 아래 마진이 겹치는 현상 (양 옆은 영향을 끼치지 않음)
+-->
+<style>
+* {
+	margin: 0; padding: 0;
+}
+h1 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+p {
+	/* 
+		h1의 margin-bttom과 p의 margin-top으로 인해 중간에 30px의 빈 공간이 생기기를 기대하지만, 실제 결과는 20px의 마진만 적용되는 것을 확인 가능
+		(가장 큰 마진값을 적용)
+	*/
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+/*
+	리스트의 경우 마진 겹칩 현상이 일어나지 않으면 오히려 부자연스럽게 보일 수 있음
+*/
+ol {
+	width: 50%;
+	margin: 0 auto;
+	list-style-position: inside;
+	border: 1px solid black;
+}
+/*
+	가령 밑의 스타일을 적용할 경우 마진 겹칩이 적용되지 않으면 밑의 항목과 윗 항목의 마진이 모두 적용되어 20px 공간이 띄워지므로 어색할 수 있음
+	(The general meaning of "margin" isn't to convey "move this over by 10px" but rather, "there must be 10px of empty space beside this element.")
+	https://stackoverflow.com/questions/3069921/what-is-the-point-of-css-collapsing-margins
+*/
+li {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+</style>
+<body>
+	<h1>Hello.</h1>
+	<p>This is paragraph.</p>
+	<ol>
+		<li>item 1</li>
+		<li>item 2</li>
+		<li>item 3</li>
+		<li>item 4</li>
+	</ol>
+</body>

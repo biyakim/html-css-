@@ -1,0 +1,106 @@
+<!--
+
+	CSS3 animation 속성
+
+	리퍼런스 : 
+
+	http://www.w3schools.com/css/css3_animations.asp
+
+-->
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+img {
+	display: block;
+}
+/* animation sub-properties */
+/*
+
+animation-name: declares the name of the @keyframes at-rule to manipulate.
+
+animation-duration: the length of time it takes for an animation to complete one cycle.
+
+animation-timing-function: establishes preset acceleration curves such as ease or linear.
+
+animation-delay: the time between the element being loaded and the start of the animation sequence.
+
+animation-direction: sets the direction of the animation after the cycle. Its default resets on each cycle.
+normal: 애니메이션 원래 프레임대로 진행;
+reverse: 역순으로 진행;
+alternate: normal, reverse를 번갈아 가면서 진행;
+
+animation-iteration-count: the number of times the animation should be performed.
+
+animation-fill-mode: sets which values are applied before/after the animation. For example, you can set the last state of the animation to remain on screen(forwards), or you can set it to switch back to before when the animation began(backwards).
+
+animation-play-state: pause/play the animation.
+
+shorthand
+
+animation:
+	[name],
+	[duration],
+	[timing-function=ease],
+	[delay=0],
+	[iteration-count],
+	[direction],
+	[fill-mode],
+	[play-state]
+;
+*/
+/* 퍼센티지를 사용하여 애니메이션 정의 */
+@keyframes font-size-up {
+	0% {
+		font-size: 12px;
+	}
+	100% {
+		font-size: 24px;
+	}
+}
+@keyframes my-animation {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+/* from, to를 이용하여 애니메이션 정의 */
+@keyframes spinning {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.player1 {
+	width: 100px;
+	height: 100px;
+	background: red;
+	animation: my-animation 3s infinite;
+}
+.player2 {
+	width: 100px;
+	height: 100px;
+	font-size: 12px;
+	border: 1px solid black;
+	animation: font-size-up 3s infinite;
+}
+.player3 {
+	animation: spinning 0.5s infinite linear;
+}
+.player4 {
+	/* add multiple animation */
+	animation: spinning 0.5s infinite linear, my-animation 1s infinite;
+}
+</style>
+<div class="player1"></div>
+<div class="player2">hello</div>
+<img class="player3" src="star.png" />
+<img class="player4" src="star.png" />

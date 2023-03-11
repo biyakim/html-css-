@@ -1,0 +1,53 @@
+<meta charset="utf-8" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	outline: 1px solid red;
+}
+.container1, .container4 {
+	width: 50%;
+}
+.container2, .container3 {
+	width: 600px;
+}
+.inner4 {
+	width: 50%;
+}
+.inner2 {
+	width: 300px;
+}
+.inner3 {
+	width: 50%;
+}
+</style>
+<body>
+	<!-- 블록 엘리먼트는 width 속성값을 명시하지 않으면 100%를 적용 -->
+	<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements -->
+	<div class="inner-body-container">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+	<!-- container1의 width는 50% (상대값, 기준은 body의 width) -->
+	<div class="container1">
+		<!-- 따로 width 속성값을 명시하지 않았으므로 부모(container1)의 width 값을 다 차지하려고 함 -->
+		<div class="inner1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	</div>
+
+	<!-- container4의 width는 50% (상대값, 기준은 body의 width) -->
+	<div class="container4">
+		<!-- inner4의 width는 50% (상대값, 기준은 container1의 width) -->
+		<div class="inner4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	</div>
+
+	<!-- container2의 width는 600px (절대값) -->
+	<div class="container2">
+		<!-- inner2의 width는 300px (절대값) -->
+		<div class="inner2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	</div>
+
+	<!-- container3의 width는 600px (절대값) -->
+	<div class="container3">
+		<!-- inner3의 width는 50% (값 자체는 상대값이지만 사실은 300px로 절대값) -->
+		<div class="inner3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	</div>
+</body>
+</html>

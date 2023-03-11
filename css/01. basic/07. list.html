@@ -1,0 +1,42 @@
+<!-- CSS 목록 관련 스타일 -->
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	/*
+		리스트 bullet 스타일 지정
+		list-style-type: none; (http://www.w3schools.com/css/tryit.asp?filename=trycss_list-style-type_all)
+		
+		리스트 bullet 이미지 지정
+		list-style-image: url('image/bullets.png');
+
+		리스트 bullet의 위치 지정
+		list-style-position: inside; (or outside)
+	*/
+	ol, ul {
+		width: 50%;
+	}
+	ol {
+		list-style-type: square;
+		list-style-position: inside;
+	}
+	ul {
+		list-style-image: url('image/bullets.png');
+		/* 바깥으로 나가므로 안 보임 (왼쪽 마진값을 주어야 보임) */
+		list-style-position: outside;
+		/* margin-left: 20px; */
+	}
+</style>
+<body>
+	<ol>
+		<li>목록 아이템 1</li>
+		<li>목록 아이템 3</li>
+		<li>목록 아이템 3</li>
+	</ol>
+	<ul>
+		<li>목록 아이템 1</li>
+		<li>목록 아이템 3</li>
+		<li>목록 아이템 3</li>
+	</ul>
+</body>

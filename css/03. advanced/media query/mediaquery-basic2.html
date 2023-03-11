@@ -1,0 +1,59 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</script>
+	<style>
+	/* **공통적**으로 적용할 속성을 여기다가 쓰기 */
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	h1 {
+		color: white;
+	}
+	ul, ol {
+		list-style-position: inside;
+	}
+	
+	/* 데스크탑을 위한 CSS styles */
+	body {
+		background: green;
+	}
+	h1 {
+		font-size: 16px;
+	}
+
+	/* 0px ~ 768px까지 스타일 적용 */
+	@media only screen and (max-width : 768px) {
+		body {
+			background: red;
+		}
+		h1 {
+			font-size: 20px;
+		}
+	}
+
+	/* 0px ~ 480px까지 스타일 적용 */
+	@media only screen and (max-width : 480px) {
+		body {
+			background: gray;
+		}
+		h1 {
+			font-size: 26px;
+		}
+		div {
+			display: none;
+		}
+	}
+
+	</style>
+</head>
+<body>
+	<h1>Header 1</h1>
+	<hr />
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra augue eget dui mattis tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam condimentum feugiat arcu sed pharetra. Nullam at vehicula purus.
+	</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.flexbox-container-row {
+	height: 500px;
+	margin: 20px auto;
+	outline: 1px solid green;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.flexbox-container-row .item {
+	width: 100px;
+	height: 100px;
+	background: lightgray;
+	outline: 1px solid red;
+}
+/*
+	align-items 속성에 의하여 개별 항목에 적용된 정렬 방식을 바꾸고 싶은 경우 align-self 속성 사용
+*/
+.item:nth-child(1) {
+	align-self: flex-end;
+}
+.item:nth-child(3) {
+	align-self: flex-start;
+}
+</style>
+<body>
+	<div class="flexbox-container-row">
+		<div class="item">align-self<br />flex-end</div>
+		<div class="item">2</div>
+		<div class="item">align-self<br />flex-start</div>
+	</div>
+</body>

@@ -1,0 +1,73 @@
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.flexbox-container-row {
+	width: 1000px;
+	margin: 20px auto;
+	outline: 1px solid green;
+	display: flex;
+	flex-direction: row;
+	/*
+		justify-content는 flexbox 내부에 포함되어야 할 항목들의 주 축(main-axis) 방향의 정렬 방식을 지정하기 위해서 사용됨
+		
+		https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg
+	*/
+	justify-content: flex-start; /* 개발자 도구에서 하나씩 체크 해제하며 확인해보기 */
+	justify-content: flex-end;
+	justify-content: center;
+	justify-content: space-between;
+	justify-content: space-around;
+	justify-content: space-evenly;
+	/*
+		현재 주 축(main-axis)의 방향이 row로 설정되어 있으므로 아래 사진의 main start, main end 부분이 정렬의 기준이 됨
+		https://miro.medium.com/max/2800/1*dH2D2U0yOf4a2Z_OYxRsKg.png 
+	*/
+}
+.flexbox-container-row .item {
+	width: 200px;
+	height: 100px;
+	background: lightgray;
+	outline: 1px solid red;
+}
+
+.flexbox-container-column {
+	width: 1000px;
+	margin: 20px auto;
+	outline: 1px solid green;
+	display: flex;
+	flex-direction: column;
+	/*
+		height 속성을 지정하지 않으면 항목들을 모두 포함하도록 자동으로 사이즈가 설정되므로 수동으로 사이즈 설정
+	*/
+	height: 500px;
+	/*
+		현재 주 축(main-axis)의 방향이 column으로 설정되어 있으므로 아래 사진의 cross start, cross end 부분이 정렬의 기준이 됨
+		https://miro.medium.com/max/2800/1*dH2D2U0yOf4a2Z_OYxRsKg.png 
+	*/
+	justify-content: flex-start;
+	justify-content: flex-end;
+	justify-content: center;
+	justify-content: space-between;
+	justify-content: space-around;
+	justify-content: space-evenly;
+}
+.flexbox-container-column .item {
+	height: 100px;
+	background: lightgray;
+	outline: 1px solid red;
+}
+</style>
+<body>
+	<div class="flexbox-container-row">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+	</div>
+	<div class="flexbox-container-column">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+	</div>
+</body>

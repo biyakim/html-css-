@@ -1,0 +1,37 @@
+<body>
+	<!--
+		앵커(anchor) 태그 (하이퍼링크를 제공하기 위해서 사용)
+		
+		앵커 태그는 인라인 요소
+
+		주요 속성
+
+		href : 인터넷 주소(URL)를 적는 속성
+
+		target : 링크를 통해 이동할 페이지를 어디에다가 띄워줄 지 설정하는 속성
+		* _self => 현재 창에다가 띄우기
+		* _blank => 새 창에다가 띄우기
+	-->
+	<!-- 링크로 이동하기 -->
+	<a href="http://www.naver.com">네이버로 이동하기</a><br />
+
+	<!-- 메일 보내기 -->
+	<a href="mailto:hello@hello.com">메일 보내기</a><br />
+	
+	<!-- 파일로 이동하기 (href에 파일의 경로를 써주면 됨) -->
+	<a href="images/like.png">이미지 파일로 이동하기</a><br />
+	<a href="files/hello.txt">텍스트 파일로 이동하기</a><br />
+
+	<!-- 텍스트 일부를 링크로 설정하는 것도 가능 -->
+	<p>HTML 태그 중 <a href="http://www.w3schools.com/tags/tag_a.asp" target="_blank">앵커 태그의 사용 방법</a>을 알아봅시다!</p>
+
+	<!-- href에 해시(#)를 이용하여 내부 페이지에서의 특정 위치를 링크할 수 있음 -->
+	<a href="#" style="position: fixed; top: 0%; right: 0%;">맨위로</a>
+	<a href="#para1">1번 단락으로 이동</a><br />
+	<a href="#para2">2번 단락으로 이동</a><br />
+	<a href="#para3">3번 단락으로 이동</a>
+
+	<p id="para1" style="margin-top: 3000px; margin-bottom: 3000px;">para 1</p>
+	<p id="para2" style="margin-top: 3000px; margin-bottom: 3000px;">para 2</p>
+	<p id="para3" style="margin-top: 3000px; margin-bottom: 3000px;">para 3</p>
+</body>

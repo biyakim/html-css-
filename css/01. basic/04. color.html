@@ -1,0 +1,81 @@
+<!-- CSS 색 표현법 -->
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* CSS에는 색을 표현하기 위한 여러 방법이 존재 */
+
+	/*
+		1. 이미 정의된 색(Predefined/Cross-browser color names)의 고유 이름으로 색을 지정
+		
+		http://www.w3schools.com/colors/colors_names.asp
+	*/
+	.color_demo_1 {
+		color: red;
+	}
+
+	/*
+		2. 16진수(Hexadecimal)를 이용하여 색을 지정 (중요도 ***)
+
+		red, green, blue를 각각 두 자리의 16진수로 표현
+		각 색의 범위는 00 ~ FF (십진수로 0 ~ 255)
+	*/
+	.color_demo_2 {
+		color: #FF0000;
+	}
+
+	/*
+		3. rgba값을 직접 지정하여 색을 지정 (중요도 **)
+
+		red (0 ~ 255)
+		green (0 ~ 255)
+		blue (0 ~ 255)
+		alpha (0 ~ 1) <= 범위 주의!
+	*/
+	.color_demo_3 {
+		color: rgb(255, 0, 0);
+	}
+	.color_demo_4 {
+		color: rgba(255, 0, 0, 1);
+	}
+
+	/*
+		4. 색상, 채도, 밝기, 알파값를 직접 지정하여 색을 지정
+
+		https://i.stack.imgur.com/4jGKQ.png (HSL color wheel)
+		http://hslpicker.com 참조
+
+		hue (0 ~ 360) : 색상
+		saturation (0% ~ 100%) : 채도
+		lightness (0% ~ 100%) : 밝기
+		alpha (0 ~ 1)
+	*/
+	.color_demo_5 {
+		color: hsl(0, 100%, 50%);
+	}
+	.color_demo_6 {
+		color: hsla(0, 100%, 50%, 1);	
+	}
+	
+	/*
+		css gradient 
+
+		http://www.colorzilla.com/gradient-editor/
+		http://www.w3schools.com/css/css3_gradients.asp
+	*/
+	#gradient {
+		color: white;
+		background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+	}
+</style>
+<body>
+	<h1 class="color_demo_1">CSS color test 1</h1>
+	<h1 class="color_demo_2">CSS color test 2</h1>
+	<h1 class="color_demo_3">CSS color test 3</h1>
+	<h1 class="color_demo_4">CSS color test 4</h1>
+	<h1 class="color_demo_5">CSS color test 5</h1>
+	<h1 class="color_demo_6">CSS color test 6</h1>
+	<div id="gradient">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend ac est eu varius. Praesent sed justo vel metus feugiat hendrerit. Nam mi elit, commodo nec vulputate vitae, suscipit vel dolor. Sed fringilla pharetra metus, id efficitur felis suscipit quis. Cras suscipit consequat bibendum. Pellentesque dapibus, ligula vel volutpat varius, felis enim dignissim lorem, vel egestas ligula odio ac orci. Vivamus lectus lectus, ultricies sit amet semper a, consectetur at nisl. Nam nulla est, dapibus id tellus non, ullamcorper dictum lacus. Suspendisse pellentesque consectetur ipsum eu dignissim.</div>
+</body>

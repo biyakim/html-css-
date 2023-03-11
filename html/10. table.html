@@ -1,0 +1,88 @@
+<style>
+	table {
+		border-collapse: collapse;
+		margin-left: 50px;
+		margin-top: 50px;
+	}
+	th, td {
+		border: 1px solid black;
+	}
+</style>
+<body>
+	<!--
+		표(table) 태그
+
+		tr : table row (행)
+		th : table head (표 제목)
+		td : table data (셀 데이터)
+	-->
+	<table>
+		<tr>
+			<th>표 제목 1</th>
+			<th>표 제목 2</th>
+			<th>표 제목 3</th>
+		</tr>
+		<tr>
+			<td>1행의 데이터 1</td>
+			<td>1행의 데이터 2</td>
+			<td>1행의 데이터 3</td>
+		</tr>
+		<tr>
+			<td>2행의 데이터 1</td>
+			<td>2행의 데이터 2</td>
+			<td>2행의 데이터 3</td>
+		</tr>
+	</table>
+
+	<!-- 왼쪽에 표 제목이 있는 형태의 테이블 -->
+	<table>
+		<tr>
+			<th>First Name</th>
+			<td>Bill Gates</td>
+		</tr>
+		<tr>
+			<th>Telephone</th>
+			<td>555-77-854</td>
+		</tr>
+	</table>
+
+	<table>
+		<!-- 
+			caption : 테이블 내용에 대한 요약 정보
+
+			thead : 테이블 헤더 (생략 가능)
+			tbody : 테이블 바디 (생략 불가, 만약 생략되었을 경우 브라우저에서 자동으로 삽입)
+			tfoot : 테이블 푸터 (생략 가능)
+
+			caption 태그는 자신의 부모인 table 요소의 제목을 
+			나타내며 항상 테이블의 첫 번째 자손에 위치해야 함
+		-->
+		<caption>Monthly savings</caption>
+		<!-- thead : 테이블 헤더 -->
+		<thead style="background: orange;">
+			<tr>
+				<th>Month</th>
+				<th>Savings</th>
+			</tr>
+		</thead>
+		<!-- tfoot : 테이블 푸터 -->
+		<!-- 위치는 thead 뒤에 tbody 앞에 와야 함! (http://reference.sitepoint.com/html/tfoot) -->
+		<tfoot style="background: yellow;">
+			<tr>
+				<td>Sum</td>
+				<td>$180</td>
+			</tr>
+		</tfoot>
+		<!-- 실제 테이블 정보 영역 -->
+		<tbody>
+			<tr>
+				<td>January</td>
+				<td>$100</td>
+			</tr>
+			<tr>
+				<td>February</td>
+				<td>$80</td>
+			</tr>
+		</tbody>
+	</table>
+</body>

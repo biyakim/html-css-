@@ -1,0 +1,89 @@
+<meta charset="utf-8" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	outline: 1px solid red;
+}
+
+.container1 {
+	overflow: auto; /* 부모의 height 값이 0이 되는 현상 방지 위한 hack */
+	width: 800px;
+	margin: 0 auto;
+}
+.container1 .left-inner {
+	background: red;
+	float: left;
+	width: 40%; /* 320px */
+}
+.container1 .right-inner {
+	background: blue;
+	float: right;
+	width: 40%; /* 320px */
+}
+
+.container2 {
+	overflow: auto; /* 부모의 height 값이 0이 되는 현상 방지 위한 hack */
+	width: 800px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.container2 .left-inner {
+	background: red;
+	float: left;
+	width: 50%;
+}
+.container2 .right-inner {
+	background: blue;
+	float: right;
+	width: 50%;
+}
+
+.container3 {
+	overflow: auto; /* 부모의 height 값이 0이 되는 현상 방지 위한 hack */
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.container3 .left-inner {
+	background: red;
+	float: left;
+	width: 400px;
+}
+.container3 .right-inner {
+	background: blue;
+	float: right;
+	width: 400px;
+}
+</style>
+<body>
+	<!-- ex1 -->
+	<div class="container1">
+		<div class="left-inner">
+			왼쪽 float
+		</div>
+		<div class="right-inner">
+			오른쪽 float
+		</div>
+	</div>
+
+	<!-- ex2 -->
+	<div class="container2">
+		<div class="left-inner">
+			왼쪽 float
+		</div>
+		<div class="right-inner">
+			오른쪽 float
+		</div>
+	</div>
+
+	<!-- ex3 -->
+	<div class="container3">
+		<div class="left-inner">
+			왼쪽 float
+		</div>
+		<div class="right-inner">
+			오른쪽 float
+		</div>
+	</div>
+</body>

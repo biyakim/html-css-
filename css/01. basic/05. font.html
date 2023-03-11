@@ -1,0 +1,42 @@
+<!-- CSS 폰트 관련 스타일 -->
+<style>
+	p {
+		width: 70%;
+		margin: 0 auto;
+		outline: 1px solid black;
+	}
+	.font-test {
+		/* C:\Windows\Fonts 폴더에서 설치된 폰트 파일 확인 가능 */
+		/*
+			font-family : 서체를 지정 
+			(가장 왼쪽에 있는 서체를 먼저 적용하고 해당 서체가 존재하지 않을 경우, 순서대로 오른쪽에 있는 서체를 적용)
+		*/
+		font-family: "궁서", "맑은 고딕", "dotum", "gulim";
+		font-size: 32px;
+		/* 스타일 조절 (normal, oblique(italic하고 비슷하지만 oblique는 기계적으로 기울인 글자)) */
+		font-style: italic; 
+		/* 굵기 조절 (normal) */
+		font-weight: bold;
+	}
+	.font-test-eng {
+		/*
+			보통 모든 서체를 찾을 수 없었을때 적용될 가장 오른쪽 서체 이름에는 3개의 서체(serif, sans-serif, monospace) 중 하나를 골라 적용함
+			
+			serif 		: 세리프 있는 폰트 (명조)
+			sans-serif 	: 세리프 없는 폰트 (고딕)
+			monospace 	: 고정폭 폰트 (코딩할 때 자주 사용하는 폰트)
+
+			http://cfs8.tistory.com/upload_control/download.blog?fhandle=YmxvZzEyNTZAZnM4LnRpc3RvcnkuY29tOi9hdHRhY2gvMC8wMjAwMDAwMDAwMDAuanBn
+		*/
+		font-family: serif;
+		/*
+		font-family: sans-serif;
+		font-family: monospace;
+		*/
+		font-size: 48px;
+	}
+</style>
+<body>
+	<p class="font-test">과실이 그러므로 인간의 아니다. 평화스러운 풀밭에 들어 수 교향악이다. 피가 없으면, 붙잡아 용기가 사막이다. 광야에서 얼마나 구하지 공자는 원대하고, 칼이다. 끓는 일월과 것은 철환하였는가 없는 눈에 구하기 같이, 듣는다. 얼음 같지 미인을 이것은 수 들어 놀이 사막이다. 실현에 타오르고 희망의 그러므로 그리하였는가? 예수는 대고, 위하여, 두기 만물은 트고, 구하지 봄바람이다. 공자는 설산에서 가치를 꽃이 풍부하게 맺어, 힘있다. 같이, 옷을 힘차게 아름답고 약동하다. 사라지지 무엇을 용기가 안고, 있는 것이다. 사는가 더운지라 만천하의 싶이 광야에서 앞이 부패뿐이다.</p>
+	<p class="font-test-eng">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</body>

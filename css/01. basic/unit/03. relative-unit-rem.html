@@ -1,0 +1,46 @@
+<!--
+
+em, rem 단위 설명
+
+http://naradesign.net/wp/2014/09/16/2067/
+
+-->
+<meta charset="utf-8" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+/* 
+	rem단위(root em)는 부모 아닌 시조(root)로부터 글꼴 크기를 물려받기 때문에 html 요소에 기본 글꼴 크기를 지정해 두면 항상 html 요소로부터 글꼴 크기를 상속 받습니다. html 요소의 글꼴 크기를 변경하는것 만으로 페이지의 모든 글꼴 크기를 변경할 수 있다는 점 자체는 em 요소와 다를바 없지만 rem 요소는 부모 요소로부터 상속을 받지 않기 때문에 페이지 모든 글꼴의 크기 변화를 예측할 수 있고 계산하기도 쉽습니다. 
+*/
+/*
+html 스타일에 아래와 같은 CSS rule이 생략되어 있다고 생각하기
+
+html {
+	font-size: 1em;
+}
+*/
+.container {
+	font-size: 3rem; /* 16px(= 1em) * 3 */
+}
+.child-container {
+	font-size: 1rem; /* 16px(= 1em) * 0.5 */
+}
+</style>
+<body>
+	<!-- container 내부의 font-size는 3rem (16px * 3) -->
+	<div class="container">
+		<span>hello</span>
+		<span style="font-size: 48px;">hello</span>
+		<!-- 
+			child-container 내부의 font-size는 0.5rem
+			(rem는 시조 font-size에 영향을 받으므로 (16px * 1 = 16px) 
+		-->
+		<div class="child-container">
+			<!-- em 예제와는 다르게 밑의 hello와 크기 차이가 나는 것을 관찰 가능 -->
+			<span>hello</span>
+			<span style="font-size: 24px;">hello</span>
+		</div>
+	</div>
+</body>
